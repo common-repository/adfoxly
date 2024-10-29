@@ -1,0 +1,597 @@
+/*.adfoxly-admin-page #wpbody*/
+
+/* todo: to remove */
+/*.adfoxly-admin-page .sidebar {*/
+  /*min-height: calc(100vh - 63px);*/
+  /*background: #fff;*/
+  /*font-family: "Poppins", sans-serif;*/
+  /*padding: 0;*/
+  /*width: 255px;*/
+  /*z-index: 11;*/
+  /*transition: width 0.25s ease, background 0.25s ease;*/
+  /*-webkit-transition: width 0.25s ease, background 0.25s ease;*/
+  /*-moz-transition: width 0.25s ease, background 0.25s ease;*/
+  /*-ms-transition: width 0.25s ease, background 0.25s ease;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav {*/
+  /*overflow: hidden;*/
+  /*-ms-flex-wrap: nowrap;*/
+  /*flex-wrap: nowrap;*/
+  /*-webkit-box-orient: vertical;*/
+  /*-webkit-box-direction: normal;*/
+  /*-ms-flex-direction: column;*/
+  /*flex-direction: column;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .collapse {*/
+  /*z-index: 999;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .collapse.show, .adfoxly-admin-page .sidebar .nav .nav-item .collapsing {*/
+  /*background: #fafbfc;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link {*/
+  /*-webkit-box-align: center;*/
+  /*-ms-flex-align: center;*/
+  /*align-items: center;*/
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*padding: 16px 35px;*/
+  /*white-space: nowrap;*/
+  /*height: 52px;*/
+  /*color: #4a4a4a;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link i.menu-arrow {*/
+  /*margin-left: auto;*/
+  /*margin-right: 0;*/
+  /*-webkit-transition-duration: 0.2s;*/
+  /*transition-duration: 0.2s;*/
+  /*-webkit-transition-property: -webkit-transform;*/
+  /*transition-property: -webkit-transform;*/
+  /*transition-property: transform;*/
+  /*transition-property: transform, -webkit-transform;*/
+  /*-webkit-transition-timing-function: ease-in;*/
+  /*transition-timing-function: ease-in;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link i.menu-arrow:before {*/
+  /*content: "\F142";*/
+  /*font-family: "Material Design Icons";*/
+  /*font-size: 18px;*/
+  /*line-height: 1;*/
+  /*font-style: normal;*/
+  /*vertical-align: middle;*/
+  /*color: rgba(74, 74, 74, 0.5);*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link[aria-expanded="true"] {*/
+  /*background: #fafbfc;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link[aria-expanded="true"] i.menu-arrow {*/
+  /*-webkit-transform: rotate(90deg);*/
+  /*transform: rotate(90deg);*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link .menu-icon {*/
+  /*margin-right: 1.25rem;*/
+  /*width: 16px;*/
+  /*line-height: 1;*/
+  /*font-size: 18px;*/
+  /*color: #979797;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav .nav-item .nav-link .menu-icon {*/
+  /*margin-right: 0;*/
+  /*margin-left: 1.25rem;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link .menu-title {*/
+  /*color: inherit;*/
+  /*display: inline-block;*/
+  /*font-size: 12px;*/
+  /*line-height: 1;*/
+  /*vertical-align: middle;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link .badge {*/
+  /*margin-left: auto;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item .nav-link:hover {*/
+  /*color: #3d3d3d;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.active > .nav-link {*/
+  /*color: #0073AA;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.active > .nav-link .menu-title, .adfoxly-admin-page .sidebar .nav .nav-item.active > .nav-link i {*/
+  /*color: inherit;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link {*/
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*-webkit-box-orient: vertical;*/
+  /*-webkit-box-direction: normal;*/
+  /*-ms-flex-direction: column;*/
+  /*flex-direction: column;*/
+  /*height: auto;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper {*/
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*margin-bottom: 30px;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .profile-image {*/
+  /*width: 40px;*/
+  /*height: 40px;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .profile-image img {*/
+  /*border-radius: 100%;*/
+  /*max-width: 100%;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .text-wrapper {*/
+  /*margin-left: 15px;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .text-wrapper {*/
+  /*margin-left: 0;*/
+  /*margin-right: 15px;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .text-wrapper .profile-name {*/
+  /*font-weight: 500;*/
+  /*margin-bottom: 8px;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .text-wrapper .designation {*/
+  /*margin-right: 3px;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link {*/
+  /*background: #fafbfc;*/
+  /*color: #4a4a4a;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav.sub-menu {*/
+  /*margin-bottom: 0;*/
+  /*padding: 0 0 0 4rem;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav.sub-menu .nav-item .nav-link {*/
+  /*color: #4a4a4a;*/
+  /*padding: 0.75rem 1rem;*/
+  /*font-size: 12px;*/
+  /*line-height: 1;*/
+  /*height: auto;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav.sub-menu .nav-item .nav-link.active {*/
+  /*color: #0073AA;*/
+  /*background: transparent;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav.sub-menu .nav-item .nav-link.active:before {*/
+  /*background: #0073AA;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav.sub-menu .nav-item:hover > .nav-link {*/
+  /*background: initial;*/
+  /*color: #000;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar .nav.sub-menu .nav-item:hover > .nav-link:before {*/
+  /*background: #000;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar {*/
+  /*background: #252c46;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .collapse.show, .adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .collapsing {*/
+  /*background: #2e3657;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .nav-link {*/
+  /*color: #9f9ea3;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .nav-link[aria-expanded="true"] {*/
+  /*background: #2e3657;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .nav-link i:not(.btn i) {*/
+  /*color: #9f9ea3;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .nav-link i:not(.btn i).menu-arrow:before {*/
+  /*color: rgba(159, 158, 163, 0.5);*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .nav-link:hover {*/
+  /*color: #929197;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item.nav-profile .profile-name .name {*/
+  /*color: #404852;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item.nav-profile .profile-name .designation {*/
+  /*color: #8d9498;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item.nav-profile .notification-panel:before {*/
+  /*background: #404852;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item.nav-profile .notification-panel > span {*/
+  /*background: #2e3657;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item.nav-profile .notification-panel > span i {*/
+  /*color: #8ba2b5;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item.active > .nav-link {*/
+  /*color: #fff;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav .nav-item .sidebar-sticker {*/
+  /*background: #2e3657;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link {*/
+  /*background: #2e3657;*/
+  /*color: #9f9ea3;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link {*/
+  /*color: #9f9ea3;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link.active {*/
+  /*color: #fff;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link.active:before {*/
+  /*background: #fff;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav.sub-menu .nav-item:hover > .nav-link {*/
+  /*background: initial;*/
+  /*color: #000;*/
+/*}*/
+/*.adfoxly-admin-page .sidebar-dark .sidebar .nav.sub-menu .nav-item:hover > .nav-link:before {*/
+  /*background: #000;*/
+/*}*/
+/*@media screen and (max-width: 991px) {*/
+  /*.adfoxly-admin-page .sidebar-offcanvas {*/
+    /*position: fixed;*/
+    /*max-height: calc(100vh - 63px);*/
+    /*top: 63px;*/
+    /*bottom: 0;*/
+    /*overflow: auto;*/
+    /*right: -255px;*/
+    /*-webkit-transition: all 0.25s ease-out;*/
+    /*transition: all 0.25s ease-out;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-offcanvas.active {*/
+    /*right: 0;*/
+  /*}*/
+/*}*/
+/*.adfoxly-admin-page .navbar.fixed-top + .page-body-wrapper {*/
+  /*padding-top: 63px;*/
+/*}*/
+/*@media (min-width: 992px) {*/
+  /*.adfoxly-admin-page .sidebar-mini .navbar .navbar-brand-wrapper {*/
+    /*width: 185px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .navbar .navbar-menu-wrapper {*/
+    /*width: calc(100% - 185px);*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar {*/
+    /*width: 185px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .nav-link {*/
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-ms-flex-line-pack: center;*/
+    /*align-content: center;*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*justify-content: center;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-box-direction: normal;*/
+    /*-ms-flex-direction: column;*/
+    /*flex-direction: column;*/
+    /*position: relative;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .nav-link .menu-title {*/
+    /*display: inline-block;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .nav-link .badge {*/
+    /*margin-left: 5px;*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .nav-link img {*/
+    /*display: block;*/
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    /*margin-bottom: 10px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .nav-link .menu-arrow {*/
+    /*position: absolute;*/
+    /*right: 7px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .nav-link .menu-icon {*/
+    /*margin-right: 0;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item.nav-profile .nav-link {*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*justify-content: center;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item.nav-profile .nav-link .profile-name {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item.nav-profile i {*/
+    /*margin-left: 1rem;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .sidebar .nav .nav-item .sidebar-sticker {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini .main-panel {*/
+    /*width: calc(100% - 185px);*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav:not(.sub-menu) > .nav-item {*/
+    /*border-top: 1px solid rgba(159, 158, 163, 0.2);*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav:not(.sub-menu) > .nav-item.nav-doc, .adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav:not(.sub-menu) > .nav-item.nav-profile {*/
+    /*border-top: 0;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav:not(.sub-menu) > .nav-item .nav-link {*/
+    /*height: auto;*/
+    /*padding: 0.8125rem 1rem 0.8125rem 1rem;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav:not(.sub-menu) > .nav-item .nav-link i.menu-icon {*/
+    /*margin-bottom: 0.5rem;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav.sub-menu {*/
+    /*padding: 0 0.5rem;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav.sub-menu .nav-item .nav-link {*/
+    /*padding: 1rem 0;*/
+    /*text-align: center;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav.sub-menu .nav-item .nav-link:before {*/
+    /*display: none;*/
+  /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+  /*.adfoxly-admin-page .sidebar-icon-only .navbar .navbar-brand-wrapper {*/
+    /*width: 70px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .navbar .navbar-brand-wrapper .brand-logo {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .navbar .navbar-brand-wrapper .brand-logo-mini {*/
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .navbar .navbar-menu-wrapper {*/
+    /*width: calc(100% - 70px);*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar {*/
+    /*width: 70px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav {*/
+    /*overflow: visible;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item {*/
+    /*position: relative;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .nav-link {*/
+    /*display: block;*/
+    /*text-align: center;*/
+    /*padding-left: 25px;*/
+    /*padding-right: 25px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .nav-link .badge, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .nav-link i.menu-icon {*/
+    /*margin-right: 0;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .nav-link i.menu-arrow {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item.nav-profile, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .sidebar-sticker {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item .collapse {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title {*/
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-webkit-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*align-items: center;*/
+    /*background: #fafbfc;*/
+    /*color: #4a4a4a;*/
+    /*padding: 0.5rem 1.25rem;*/
+    /*left: 70px;*/
+    /*position: absolute;*/
+    /*text-align: left;*/
+    /*top: 0;*/
+    /*width: 200px;*/
+    /*z-index: 1;*/
+    /*height: 52px;*/
+    /*line-height: 1.8;*/
+    /*border-top-right-radius: 5px;*/
+    /*border-bottom-right-radius: 5px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title {*/
+    /*background: #2e3657;*/
+    /*color: #9f9ea3;*/
+  /*}*/
+  /*.adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title {*/
+    /*left: auto;*/
+    /*right: 70px;*/
+    /*text-align: right;*/
+    /*border-top-right-radius: 0;*/
+    /*border-bottom-right-radius: 0;*/
+    /*border-top-left-radius: 5px;*/
+    /*border-bottom-left-radius: 5px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title:after {*/
+    /*display: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link[data-toggle=collapse] .menu-title {*/
+    /*border-bottom-right-radius: 0;*/
+  /*}*/
+  /*.adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link[data-toggle=collapse] .menu-title {*/
+    /*border-bottom-left-radius: 0;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {*/
+    /*display: block;*/
+    /*padding: 0.5rem 0;*/
+    /*background: #fafbfc;*/
+    /*color: #4a4a4a;*/
+    /*position: absolute;*/
+    /*top: 52px;*/
+    /*left: 70px;*/
+    /*width: 200px;*/
+    /*border-bottom-right-radius: 5px;*/
+    /*-webkit-box-shadow: 0 1px 15px 1px rgba(113, 106, 202, 0.08);*/
+    /*box-shadow: 0 1px 15px 1px rgba(113, 106, 202, 0.08);*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .adfoxly-admin-page .sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {*/
+    /*background: #2e3657;*/
+    /*color: #9f9ea3;*/
+  /*}*/
+  /*.adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {*/
+    /*border-bottom-right-radius: 0;*/
+    /*border-bottom-left-radius: 5px;*/
+  /*}*/
+  /*.adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {*/
+    /*left: auto;*/
+    /*right: 70px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu {*/
+    /*padding: 0 0 0 1.5rem;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {*/
+    /*text-align: left;*/
+    /*color: #4a4a4a;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link:hover {*/
+    /*color: #ccc;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-dark.sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {*/
+    /*color: #9f9ea3;*/
+  /*}*/
+  /*.adfoxly-admin-page .rtl.sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {*/
+    /*text-align: right;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item:nth-child(5n+1) .nav-link:before, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item:nth-child(5n+2) .nav-link:before, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item:nth-child(5n+3) .nav-link:before, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item:nth-child(5n+4) .nav-link:before, .adfoxly-admin-page .sidebar-icon-only .sidebar .nav.sub-menu .nav-item:nth-child(5n+5) .nav-link:before {*/
+    /*background: #fff;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-icon-only .main-panel {*/
+    /*width: calc(100% - 70px);*/
+  /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+  /*.adfoxly-admin-page .sidebar-hidden .sidebar {*/
+    /*transition: width 0.25s ease;*/
+    /*-webkit-transition: width 0.25s ease;*/
+    /*-moz-transition: width 0.25s ease;*/
+    /*-ms-transition: width 0.25s ease;*/
+    /*width: 0;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-hidden .main-panel {*/
+    /*width: 100%;*/
+  /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+  /*.adfoxly-admin-page .sidebar-absolute .page-body-wrapper {*/
+    /*position: relative;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-absolute .page-body-wrapper .sidebar {*/
+    /*-webkit-transition: none;*/
+    /*transition: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-absolute:not(.sidebar-hidden) .sidebar {*/
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*-webkit-box-shadow: 0 0 3px 1px #a7a3a3;*/
+    /*!* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ *!*/
+    /*!* Firefox 3.5 - 3.6 *!*/
+    /*box-shadow: 0 0 3px 1px #a7a3a3;*/
+    /*!* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 *!*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-absolute .main-panel {*/
+    /*width: 100%;*/
+    /*-webkit-transition: none;*/
+    /*transition: none;*/
+  /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+  /*.adfoxly-admin-page .sidebar-fixed .sidebar {*/
+    /*position: fixed;*/
+    /*max-height: auto;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-fixed .sidebar .nav {*/
+    /*max-height: calc(100vh - 63px);*/
+    /*overflow: auto;*/
+    /*position: relative;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-fixed .sidebar .nav.sub-menu {*/
+    /*max-height: none;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-fixed .main-panel {*/
+    /*margin-left: 255px;*/
+  /*}*/
+  /*.adfoxly-admin-page .sidebar-fixed.sidebar-icon-only .main-panel {*/
+    /*margin-left: 70px;*/
+  /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+  /*.adfoxly-admin-page .boxed-layout {*/
+    /*background: #f3f4f5;*/
+  /*}*/
+  /*.adfoxly-admin-page .boxed-layout .container-scroller {*/
+    /*width: 100%;*/
+    /*max-width: 1200px;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+  /*}*/
+  /*.adfoxly-admin-page .boxed-layout .navbar {*/
+    /*width: 100%;*/
+    /*max-width: 1200px;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+  /*}*/
+/*}*/
+/*.adfoxly-admin-page .rtl {*/
+  /*direction: rtl;*/
+  /*text-align: right;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav {*/
+  /*padding-right: 0;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav .nav-item .nav-link i.menu-icon {*/
+  /*margin-right: 0;*/
+  /*margin-left: 0.5em;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav .nav-item .nav-link i.menu-arrow {*/
+  /*margin-left: 0;*/
+  /*margin-right: auto;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav .nav-item .nav-link .badge {*/
+  /*margin-left: 0;*/
+  /*margin-right: auto;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .sidebar .nav.sub-menu {*/
+  /*padding: 0 3.45rem 0 0;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .product-chart-wrapper::-webkit-scrollbar, .adfoxly-admin-page .rtl .settings-panel .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar, .adfoxly-admin-page .rtl .sidebar-fixed .nav::-webkit-scrollbar, .adfoxly-admin-page .rtl .table-responsive::-webkit-scrollbar, .adfoxly-admin-page .rtl ul.chats::-webkit-scrollbar {*/
+  /*width: 0.5em;*/
+/*}*/
+/*.adfoxly-admin-page .rtl .product-chart-wrapper::-webkit-scrollbar-track, .adfoxly-admin-page .rtl .settings-panel .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar-track, .adfoxly-admin-page .rtl .sidebar-fixed .nav::-webkit-scrollbar-track, .adfoxly-admin-page .rtl .table-responsive::-webkit-scrollbar-track, .adfoxly-admin-page .rtl ul.chats::-webkit-scrollbar-track {*/
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);*/
+/*}*/
+/*.adfoxly-admin-page .rtl .product-chart-wrapper::-webkit-scrollbar-thumb, .adfoxly-admin-page .rtl .settings-panel .tab-content .tab-pane .scroll-wrapper::-webkit-scrollbar-thumb, .adfoxly-admin-page .rtl .sidebar-fixed .nav::-webkit-scrollbar-thumb, .adfoxly-admin-page .rtl .table-responsive::-webkit-scrollbar-thumb, .adfoxly-admin-page .rtl ul.chats::-webkit-scrollbar-thumb {*/
+  /*background-color: darkgrey;*/
+  /*outline: 1px solid slategrey;*/
+/*}*/
+
+/*.adfoxly-admin-page #wpbody .actions a:hover {*/
+  /*text-decoration: none ;*/
+/*}*/
+
+/*.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a small {*/
+  /*display: block;*/
+  /*margin-top: 5px;*/
+/*}*/
+
+/*.adfoxly-admin-page #wpbody .nav.nav-tabs.step-anchor .nav-link {*/
+  /*height: 100%;*/
+/*}*/
+
+/*@media all and (min-width: 1600px) {*/
+  /*.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li {*/
+    /*width: 16.66%;*/
+  /*}*/
+/*}*/
+
+/*.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a {*/
+  /*padding: 10px 0 15px 45px;*/
+/*}*/
+/* todo: /end to remove */

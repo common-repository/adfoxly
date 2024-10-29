@@ -1,0 +1,194 @@
+/*!
+ * SmartWizard v4.3.x
+ * jQuery Wizard Plugin
+ * http://www.techlaboratory.net/smartwizard
+ *
+ * Created by Dipu Raj
+ * http://dipuraj.me
+ *
+ * Licensed under the terms of MIT License
+ * https://github.com/techlab/SmartWizard/blob/master/LICENSE
+ */
+
+/* SmartWizard Theme: Arrows */
+.adfoxly-admin-page #wpbody .sw-theme-arrows {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > .sw-container {
+    min-height: 200px;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows .step-content {
+    padding: 0 10px;
+    border: 0px solid #D4D4D4;
+    background-color: #FFF;
+    text-align: left;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows .sw-toolbar {
+    padding: 10px;
+    margin-bottom: 0 !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > .sw-toolbar-top {
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > .sw-toolbar-bottom {
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0px;
+    background: #f5f5f5;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor li+li:before {
+    padding: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li {
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a, .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:hover {
+    color: #bbb;
+    text-decoration: none;
+    padding: 10px 0 10px 45px;
+    position: relative;
+    display: block;
+    border: 0 !important;
+    border-radius: 0;
+    outline-style: none;
+    background: #f5f5f5;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #f5f5f5;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+           /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #ddd;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li:first-child > a {
+    padding-left: 15px;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:hover {
+    color: #bbb;
+    text-decoration: none;
+    outline-style: none;
+    background: #f5f5f5;
+    border-color: #f5f5f5;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:hover:after {
+    border-left-color: #f5f5f5;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a small {
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.clickable > a:hover {
+    color: #4285F4 !important;
+    background: #46b8da !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.active > a {
+    border-color: #0073AA !important;
+    color: #fff !important;
+    background: #0073AA !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.active > a:after {
+    border-left: 30px solid #0073AA !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.done > a {
+    border-color: #94bdde !important;
+ /*  #0073AA */
+    color: #fff !important;
+    background: #94bdde !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.done > a:after {
+    border-left: 30px solid #94bdde;
+ /* c3e6cb */;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.danger > a {
+    border-color: #d9534f !important;
+    color: #fff !important;
+    background: #d9534f !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.danger > a:after {
+    border-left: 30px solid #d9534f !important;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.disabled > a, .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li.disabled > a:hover {
+    color: #eee !important;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor {
+        border: 0;
+        background: #ddd !important;
+    }
+
+    .adfoxly-admin-page #wpbody .sw-theme-arrows > .nav-tabs > li {
+        float: none !important;
+        margin-bottom: 0;
+    }
+
+    .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a, .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:hover {
+        padding-left: 15px;
+        margin-right: 0;
+        margin-bottom: 1px;
+    }
+
+    .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:after, .adfoxly-admin-page #wpbody .sw-theme-arrows > ul.step-anchor > li > a:before {
+        display: none;
+    }
+}
+
+/* Loader Custom Style */
+.adfoxly-admin-page #wpbody .sw-theme-arrows::before {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #0073AA;
+}
+
+
+
+/*old green: #5cb85c */
