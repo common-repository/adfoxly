@@ -1,0 +1,184 @@
+{#<?php#}
+<!-- partial -->
+<div class="content-wrapper">
+    <div class="row profile-page">
+        <div class="col-12">
+
+            <div class="adfoxly-notices-wrapper"></div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
+                    <div class="bootstrap4-card card-statistics">
+                        <div class="card-body pb-0">
+                            <p class="text-muted">{{ __('Total Number of Ads', 'adfoxly' ) }}</p>
+                            <div class="d-flex align-items-center">
+                                <h4 class="font-weight-semibold">{{ countAds }}</h4>
+                            </div>
+                        </div>
+                        <canvas class="mt-2" height="40" id="statistics-graph-2"></canvas>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
+                    <div class="bootstrap4-card card-statistics">
+                        <div class="card-body pb-0">
+                            <p class="text-muted">{{ __('Total Ads Views', 'adfoxly') }}</p>
+                            <div class="d-flex align-items-center">
+                                <h4 class="font-weight-semibold">{{ countAdsViews }}</h4>
+                            </div>
+                        </div>
+                        <canvas class="mt-2" height="40" id="statistics-graph-1"></canvas>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
+                    <div class="bootstrap4-card card-statistics">
+                        <div class="card-body pb-0">
+                            <p class="text-muted">{{ __('Total Ads Clicks', 'adfoxly') }}</p>
+                            <div class="d-flex align-items-center">
+                                <h4 class="font-weight-semibold">{{ countAdsClicks }}</h4>
+                            </div>
+                        </div>
+                        <canvas class="mt-2" height="40" id="statistics-graph-3"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 grid-margin stretch-card">
+                    <div class="bootstrap4-card">
+
+
+
+                        <div class="card-body">
+                            <h4 class="card-title">{{ __('TOP %s Active Ads Clicks'| format(numOfClicks), 'adfoxly') }}</h4>
+                            <div class="row">
+                                <div class="col-md-6 aligner-wrapper mb-4 mb-md-0">
+                                    <canvas class="my-auto" id="trafficSourceDoughnutChart" data-banners="{{ arrayBannersID }}" data-banners-names="{{ arrayBannersName }}" data-clicks="{{ arrayClicks }}"
+                                            height="250"></canvas>
+                                    <div class="wrapper d-flex flex-column justify-content-center absolute absolute-center"></div>
+                                </div>
+                                <div class="col-md-6 legend-wrapper">
+
+                                    {% for ad in ads %}
+
+                                        <div class="d-flex mb-3">
+                                            <div class="dot-indicator bg-<?php echo $color ?> mt-1 mr-2"></div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="mb-0">Name: {{ ad['post_title'] }} <small>(ID {{ ad['banner_id'] }})</small></p>
+                                                <small class="text-muted">Clicks: {{ ad['clicks'] }} ({{ ad['percent'] }}% of all clicks)</small>
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 grid-margin stretch-card">
+                    <div class="bootstrap4-card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ __('TOP %s Active Places Views'| format(numOfViews2), 'adfoxly') }}</h4>
+                            <div class="row">
+                                <div class="col-md-6 aligner-wrapper mb-4 mb-md-0">
+                                    <canvas class="my-auto" id="trafficSourceDoughnutChart2" data-banners="{{ arrayBannersID2 }}" data-banners-names="{{ arrayBannersName2 }}" data-clicks="{{ arrayClicks2 }}"
+                                            height="250"></canvas>
+                                    <div class="wrapper d-flex flex-column justify-content-center absolute absolute-center"></div>
+                                </div>
+                                <div class="col-md-6 legend-wrapper">
+
+                                    {% for ad2 in ads2 %}
+
+                                        <div class="d-flex mb-3">
+                                            <div class="dot-indicator bg-<?php echo $color ?> mt-1 mr-2"></div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="mb-0">Name: {{ ad2['post_title'] }} <small>(ID {{ ad2['banner_id'] }})</small></p>
+                                                <small class="text-muted">Views: {{ ad2['clicks'] }} ({{ ad2['percent'] }}% of all views)</small>
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 grid-margin">
+                    <section class="section">
+                        <div class="section-body"><h2 class="section-title">Ads Banners</h2></div>
+                    </section>
+                    <div class="bootstrap4-card">
+                        <div class="card-body no-padding">
+                            <div class="row">
+                                <div class="table-sorter-wrapper col-lg-12 table-responsive">
+                                    <table id="sortable-table-1" class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 50px;">#</th>
+                                            <th class="sortStyle">{{ __('Ad', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                            <th class="sortStyle" style="width: 300px">{{ __('Created date', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                            <th class="sortStyle" style="width: 150px;">{{ __('Clicks', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                            <th class="sortStyle" style="width: 150px;">{{ __('Views', 'adfoxly') }} <small>(PRO)</small><i class="mdi mdi-chevron-down"></i></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for adList in adsList %}
+                                            <tr>
+                                                <td style="width: 50px;">{{ loop.index }}</td>
+                                                <td>{{ adList.post_title }}</td>
+                                                <td style="width: 300px;">{{ adList.post_date }}</td>
+                                                <td style="width: 150px;">{{ adList.clicks }}</td>
+                                                <td class="blur" style="width: 150px;">{{ adList.adViews }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 grid-margin">
+                    <section class="section">
+                        <div class="section-body"><h2 class="section-title">Ads Places</h2></div>
+                    </section>
+                    <div class="bootstrap4-card">
+                        <div class="card-body no-padding">
+                            <div class="row">
+                                <div class="table-sorter-wrapper col-lg-12 table-responsive">
+                                    <table id="sortable-table-1" class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 50px;">#</th>
+                                            <th class="sortStyle">{{ __('Place', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                            <th class="sortStyle" style="width: 300px">{{ __('Created date', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                            <th class="sortStyle" style="width: 150px;">{{ __('Views', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for placeList in placesList %}
+                                            <tr>
+                                                <td style="width: 50px;">{{ loop.index }}</td>
+                                                <td>{{ placeList.post_title }}</td>
+                                                <td style="width: 300px;">{{ placeList.post_date }}</td>
+                                                <td style="width: 150px;">{{ placeList.views }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--</div>-->
+<!-- partial -->

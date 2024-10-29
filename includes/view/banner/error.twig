@@ -1,0 +1,39 @@
+<div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="adfoxly-notices-wrapper"></div>
+                <div class="bootstrap4-card">
+
+                    <div class="col-sm-12 grid-margin stretch-card">
+                        <section class="section">
+                            <div class="section-body">
+                                <h2 class="section-title">Oops :( Something goes wrong</h2>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="card-header">
+                        <h4>{{ __('Error explanation:', 'adfoxly') }}</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if errorReason == 'nonNumericValue' %}
+                            {{ __('Probably you have modified the URL on your way, and you have a typo. ID of ad what you want edit is non-numeric.', 'adfoxly') }}
+                        {% elseif errorReason == 'adDoesntExists' %}
+                            {{ __('That ad what you want to edit, does not exist. Maybe you remove it earlier, or another WordPress user removed it few seconds ago. Please check that this ad exists.', 'adfoxly') }}
+                        {% else %}
+                            {{ __('We do not know what\'s happened. Try one more time. If this error will be shown again, contact with the administrator or plugin author.', 'adfoxly') }}
+                        {% endif %}
+                    </div>
+
+                    <div class="card-footer text-right">
+                        <a href="{{ admin.url }}admin.php?page=adfoxly-new" class="btn btn-primary">
+                            <i class="fas fa-plus-square"></i> &nbsp; {{ __( 'Create first advert', 'adfoxly' ) }}
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

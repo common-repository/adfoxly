@@ -1,0 +1,764 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+/**
+ * Tabs
+ */
+/*@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
+:root {
+  --blue: #00aeef;
+  --indigo: #6610f2;
+  --purple: #ab8ce4;
+  --pink: #e91e63;
+  --red: #ff0017;
+  --orange: #fb9678;
+  --yellow: #ffd500;
+  --green: #3bd949;
+  --teal: #58d8a3;
+  --cyan: #57c7d4;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #292b2c;
+  --blue: #00aeef;
+  --indigo: #6610f2;
+  --purple: #ab8ce4;
+  --pink: #e91e63;
+  --red: #ff0017;
+  --orange: #fb9678;
+  --yellow: #ffd500;
+  --green: #3bd949;
+  --teal: #58d8a3;
+  --cyan: #57c7d4;
+  --white: #fff;
+  --white-smoke: #f3f5f6;
+  --gray: #6c757d;
+  --gray-light: #8ba2b5;
+  --gray-lightest: #f7f7f9;
+  --primary: #0073AA;
+  --secondary: #e6eef2;
+  --success: #19d895;
+  --info: #8862e0;
+  --warning: #ffaf00;
+  --danger: #ff6258;
+  --light: #fbfbfb;
+  --dark: #252c46;
+  /*--breakpoint-xs: 0;*/
+  /*--breakpoint-sm: 576px;*/
+  /*--breakpoint-md: 768px;*/
+  /*--breakpoint-lg: 992px;*/
+  /*--breakpoint-xl: 1200px;*/
+  /*--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+  /*--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }*/
+}
+
+main.adfoxly-banners,
+main.adfoxly-settings {
+  /*min-width: 320px;*/
+  /*max-width: 800px;*/
+  /*padding: 50px;*/
+  margin: 0 auto;
+  background: #fff;
+}
+
+body.adfoxly-admin-page #wpbody {
+  background-color: #f3f4fa;
+}
+
+.adfoxly-banners section,
+.adfoxly-settings section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+#adsettings input[name="adfoxly_type_of_ad"] {
+  display: none;
+}
+
+.adfoxly_banners_page_adfoxly-settings input[name="adfoxly_type_of_ad"] {
+  display: none;
+}
+
+.adfoxly-banners > label,
+.adfoxly-settings > label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+.adfoxly-banners > label:before,
+.adfoxly-settings > label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.adfoxly-banners > label[for*='1']:before {
+  content: '\f03e';
+}
+
+.adfoxly-banners > label[for*='2']:before {
+  content: '\f1a0';
+}
+
+.adfoxly-banners > label[for*='3']:before {
+  content: '\f121';
+}
+
+.adfoxly-banners > label[for*='4']:before {
+  content: '\f031';
+}
+
+.adfoxly-settings > label[for*='1']:before {
+  content: '\f0c1';
+}
+
+.adfoxly-settings > label[for*='2']:before {
+  content: '\f080';
+}
+
+.adfoxly-banners > label:hover,
+.adfoxly-settings > label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.adfoxly-banners > input:checked + label,
+.adfoxly-settings > input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid #0073aa;
+  border-bottom: 1px solid #fff;
+}
+
+.adfoxly-banners #tab1:checked ~ #content1,
+.adfoxly-settings #tab1:checked ~ #content1,
+.adfoxly-banners #tab2:checked ~ #content2,
+.adfoxly-settings #tab2:checked ~ #content2,
+.adfoxly-banners #tab3:checked ~ #content3,
+.adfoxly-settings #tab3:checked ~ #content3,
+.adfoxly-banners #tab4:checked ~ #content4,
+.adfoxly-settings #tab4:checked ~ #content4,
+.adfoxly-banners #tab5:checked ~ #content4,
+.adfoxly-settings #tab5:checked ~ #content4 {
+  display: block;
+}
+
+.post-type-adfoxly_banners .thumbnail.column-thumbnail img {
+  max-height: 38px;
+}
+
+@media screen and (max-width: 650px) {
+  .adfoxly-banners > label,
+  .adfoxly-settings > label {
+    font-size: 0;
+  }
+
+  .adfoxly-banners > label:before,
+  .adfoxly-settings > label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .adfoxly-banners > label,
+  .adfoxly-settings > label {
+    padding: 15px;
+  }
+}
+
+.adfoxly-admin-page #wpbody #adfoxly-adzone-how-rotate-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-adzone-rotate-time-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-adzone-rotate-slider-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-adzone-rotate-grid-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-statistics-type-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-statistics-gaid-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-statistics-custom-gaid-wrapper {
+  display: none;
+}
+
+.textarea-adsense-ads {
+  width: 100%;
+  height: 150px;
+}
+
+.adzone-type-label {
+  display: inline-block;
+  margin: 0 30px 15px 0;
+  text-align: center
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+label.adfoxly-disabled {
+  color: rgba(51, 51, 51, .5);
+}
+
+.adfoxly-only-pro {
+  color: #a00;
+}
+
+/* custom page */
+
+.toplevel_page_adfoxly #wpcontent,
+.adfoxly-admin-page #wpbody #wpcontent {
+  padding-left: 0;
+}
+
+.toplevel_page_adfoxly .content-heading,
+.adfoxly-admin-page #wpbody .content-heading {
+  border-bottom: 0;
+  background: transparent;
+}
+
+.toplevel_page_adfoxly dd,
+.adfoxly-admin-page #wpbody dd,
+.toplevel_page_adfoxly li,
+.adfoxly-admin-page #wpbody li {
+  margin-bottom: 0;
+  outline: none;
+}
+
+/*.toplevel_page_adfoxly li:active,*/
+/*.adfoxly-admin-page #wpbody li:active,*/
+/*.toplevel_page_adfoxly li::-moz-focus-inner,*/
+/*.adfoxly-admin-page #wpbody li::-moz-focus-inner,*/
+/*.toplevel_page_adfoxly li::-moz-focus-outer,*/
+/*.adfoxly-admin-page #wpbody li::-moz-focus-outer,*/
+/*.toplevel_page_adfoxly li:focus,*/
+/*.adfoxly-admin-page #wpbody li:focus,*/
+/*.toplevel_page_adfoxly li:visited,*/
+/*.adfoxly-admin-page #wpbody li:visited {*/
+/*outline: none;*/
+/*box-shadow: none;*/
+/*}*/
+
+.toplevel_page_adfoxly *:active,
+.adfoxly-admin-page #wpbody *:active,
+.toplevel_page_adfoxly *:focus,
+.adfoxly-admin-page #wpbody *:focus {
+  outline: 0 !important;
+  /*border: none !important;*/
+  -moz-outline-style: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.toplevel_page_adfoxly .fancy-checkbox label,
+.adfoxly-admin-page #wpbody .fancy-checkbox label {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.toplevel_page_adfoxly .file-preview,
+.adfoxly-admin-page #wpbody .file-preview {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.toplevel_page_adfoxly .file-item .file-info,
+.adfoxly-admin-page #wpbody .file-item .file-info {
+  padding: 12px 12px 15px 12px;
+}
+
+.toplevel_page_adfoxly .fancy-checkbox,
+.adfoxly-admin-page #wpbody .fancy-checkbox {
+  margin-right: 0;
+}
+
+.adfoxly-admin-page #wpbody .file-item .file-preview,
+.toplevel_page_adfoxly .file-item .file-preview {
+  padding: 18px 20px;
+  height: 100px;
+}
+
+.adfoxly-admin-page #wpbody .file-preview.pdf,
+.toplevel_page_adfoxly .file-preview.pdf {
+  background: #e9eef2;
+  display: block;
+}
+
+/*.wizard .step-content {*/
+/*padding: 0;*/
+/*}*/
+
+/*.panel .panel-body {*/
+/*padding-bottom: 0;*/
+/*}*/
+
+/*.wizard .actions {*/
+/*padding-top: 0;*/
+/*}*/
+
+/*.wizard .parsley-errors-list li:first-child {*/
+/*line-height: 16px;*/
+/*height: 16px;*/
+/*}*/
+
+/*.file-item .fa::before {*/
+/*font-size: 44px;*/
+/*color: #658ec4;*/
+/*}*/
+
+/*.form-group {*/
+/*overflow: hidden;*/
+/*}*/
+
+/*.step-pane .panel {*/
+/*border: none;*/
+/*}*/
+
+/*.wizard ul li {*/
+/*background: #eeeeee;*/
+/*}*/
+
+.adfoxly-notices-wrapper {
+  margin: 0;
+}
+
+.notice {
+  margin-left: 0;
+  margin-right: 0;
+  display: none;
+}
+
+/* bootstrap ext */
+
+@media all and (min-width: 1400px) {
+  .col-xl-2 {
+    width: 16.66666667%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.adfoxly-admin-page #wpbody-content {
+  min-height: 90vh;
+}
+
+/* new design */
+
+.adfoxly-admin-page #wpbody .navbar.default-layout .navbar-menu-wrapper {
+  width: 100%;
+}
+
+.adfoxly-admin-page #wpbody .navbar.default-layout .navbar-menu-wrapper .navbar-nav.header-links {
+  padding-left: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-main .nav-pills .nav-item .nav-link,
+.adfoxly-admin-page #wpbody .sw-main .nav-tabs .nav-item .nav-link {
+  line-height: initial;
+  font-size: initial;
+  text-align: initial;
+  display: block;
+}
+
+.adfoxly-admin-page #wpbody .nav.nav-tabs.step-anchor .nav-link {
+  border-radius: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows .step-content {
+  padding: 20px 20px 0;
+}
+
+.adfoxly-admin-page #wpbody .form-check {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.adfoxly-admin-page #wpbody label.file-item {
+  margin-bottom: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-container.tab-content .mdi::before {
+  font-size: 65px;
+  line-height: 65px;
+}
+
+.adfoxly-admin-page #wpbody #smartwizard {
+  display: none;
+}
+
+.adfoxly-admin-page #wpcontent {
+  padding-left: 0;
+}
+
+.adfoxly-admin-page #wpcontent .notice {
+  margin: 5px 0 15px;
+}
+
+.adfoxly-admin-page #wpbody .notice p {
+  margin: .5em 0;
+}
+
+.adfoxly-admin-page #wpbody .notice {
+  -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+  box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.adfoxly-admin-page #wpbody .btn-toolbar {
+  display: none;
+}
+
+.top-left-radius {
+  border-top-left-radius: 5px !important;
+}
+
+.adfoxly-admin-page #wpbody label.col-form-label {
+  padding-top: 24px;
+}
+
+.adfoxly-admin-page #wpbody .form-group-type-radio label.col-form-label {
+  padding-top: 12px;
+}
+
+.top-right-radius {
+  border-top-right-radius: 5px !important;
+}
+
+.adfoxly-admin-page #wpbody .nav-pills .nav-item .nav-link,
+.adfoxly-admin-page #wpbody .nav-tabs .nav-item .nav-link {
+  /*color: rgba(0, 0, 0, .5);*/
+  color: #A5ABBD;
+}
+
+.adfoxly-admin-page #wpbody .alert-fill-danger a,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:hover,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:active,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+}
+
+.adfoxly-admin-page #wpbody .alert-fill-danger a:hover,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:active,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .7);
+  border-bottom: 2px solid rgba(255, 255, 255, .7);
+}
+
+.adfoxly-admin-page #wpcontent,
+.adfoxly-admin-page #wpcontent #wpbody-content {
+  background: #f3f4fa;
+}
+
+.adfoxly-admin-page #wpbody pre.ace-monokai,
+.adfoxly-admin-page #wpbody pre.ace_dark {
+  color: #f8f8f2;
+}
+
+.adfoxly-admin-page #wpbody .loaded-content {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody {
+  font-family: "Poppins", sans-serif;
+}
+
+.adfoxly-admin-page #wpbody .profile-text {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.adfoxly-admin-page #wpbody .accordion .bootstrap4-card .card-header a {
+  padding-right: 3rem;
+}
+
+.adfoxly-admin-page #wpbody .accordion .bootstrap4-card .card-header a:before {
+  top: 19px;
+  right: 19px;
+}
+
+.adfoxly-admin-page #wpbody .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link .profile-text {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 782px) {
+  .adfoxly-admin-page #wpcontent {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .adfoxly-admin-page #wpcontent {
+    padding-left: 0;
+  }
+}
+
+.adfoxly-admin-page #wpbody .ajdg_notification {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody #adfoxly-adsense-code {
+  width: 100%;
+  min-height: 200px;
+}
+
+.adfoxly-admin-page #wpbody #adfoxly-custom-code {
+  width: 100%;
+  min-height: 200px;
+}
+
+.adfoxly-admin-page #wpbody .select2-selection__rendered {
+  margin-bottom: 0;
+}
+
+.adfoxly-admin-page #wpbody .select2 {
+  width: 100% !important;
+}
+
+.adfoxly-admin-page #wpbody .select2-search.select2-search--inline {
+  margin-top: 7px;
+}
+
+
+.adfoxly-admin-page #wpbody .where_number_of_places_0 {
+  display: none;
+}
+
+
+.adfoxly-admin-page #wpbody .time,
+.adfoxly-admin-page #wpbody .mins,
+.adfoxly-admin-page #wpbody .meridian {
+  font-size: 14px;
+  width: 42px;
+  margin: 0 4px;
+}
+
+.adfoxly-admin-page #wpbody .meridian {
+  font-size: 11px;
+}
+.adfoxly-admin-page #wpbody .mer_tx {
+  margin: 13px 0 12px;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-timepicker.form-control:not(.form-control-sm):not(.form-control-lg) {
+  margin: 5px 0;
+  height: 30px;
+}
+
+.adfoxly-admin-page #wpbody .timepicker_wrap {
+  min-width: 175px;
+  top: 56px;
+}
+
+.adfoxly-admin-page #wpbody #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.adfoxly-admin-page #wpbody #loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #0073aa;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.adfoxly-admin-page #wpbody #loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #0087c7;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+.adfoxly-admin-page #wpbody #loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #0090d4;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.adfoxly-admin-page .swal-modal {
+  width: 60%;
+}
+
+.adfoxly-admin-page .swal-modal img {
+  max-width: 100%;
+}
+
+.adfoxly-admin-page #wpbody .wizard > .content > .body {
+  position: relative;
+}
+
+.adfoxly-admin-page #wpbody .wizard > .content {
+  background: #fff;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-adzone-popup-delay-wrapper {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-adzone-popup-repeat-wrapper {
+  display: none;
+}
+
+.adfoxly_page_adfoxly-places.adfoxly-admin-page #wpbody .place-type-popup .adfoxly-adzone-popup-delay-wrapper {
+  display: flex;
+}
+
+.adfoxly_page_adfoxly-places.adfoxly-admin-page #wpbody .place-type-popup .adfoxly-adzone-popup-repeat-wrapper {
+  display: flex;
+}
+
+.adfoxly_page_adfoxly-places.adfoxly-admin-page #wpbody .adfoxly-adzone-how-rotate-wrapper {
+  display: flex;
+}
+
+.adfoxly-admin-page.adfoxly_page_adfoxly-banners #wpbody #adfoxly-place-ads-list-wrapper {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-add-new-remove-selected-btn {
+  display: none;
+}
+.adfoxly-admin-page #wpbody .adfoxly-add-new-enable-selected-btn,
+.adfoxly-admin-page #wpbody .adfoxly-add-new-disable-selected-btn {
+  display: none;
+  box-shadow: none;
+}
+
+.invalid-feedback-form {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+  padding: 3px 8px;
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: .9;
+}

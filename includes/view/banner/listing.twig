@@ -1,0 +1,115 @@
+<div class="bootstrap4-card">
+    <div class="card-body no-padding">
+        <div class="row">
+            <div class="table-sorter-wrapper col-lg-12 table-responsive">
+                <table id="sortable-table-1" class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th style="width: 80px;">
+                            <div class="form-group adfoxly-banner-select-all adfoxly-banner-select-th">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="adfoxly-banner-select-checkbox-all" class="custom-control-input" tabindex="3" id="adfoxly-banners-select-all">
+                                    <label class="custom-control-label custom-control-label-select-all" for="adfoxly-banners-select-all"></label>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="sortStyle">{{ __('Ad', 'adfoxly') }}
+                            <i class="mdi mdi-chevron-down"></i>
+                        </th>
+                        <th class="sortStyle">{{ __('Status', 'adfoxly') }}</th>
+                        <th class="sortStyle d-none d-xl-table-cell">{{ __('Place', 'adfoxly') }}</th>
+                        <th class="sortStyle d-none d-xl-table-cell">{{ __('Campaigns', 'adfoxly') }}</th>
+                        <th class="sortStyle d-none d-xl-table-cell">{{ __('Preview', 'adfoxly') }}</th>
+                        <th class="sortStyle" style="text-align: center; width: 100px;">{{ __( "Actions", 'adfoxly' ) }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% set i = 1 %}
+                    {% for banner in banners %}
+                        <tr class="data-selection" data-selection="adfoxly-banners-select-{{ banner.details.ID }}-wrapper">
+                            <td>
+                                <div class="form-group adfoxly-banner-select adfoxly-banner-select-{{ banner.details.ID }}-td" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="adfoxly-banner-select-checkbox[]" class="custom-control-input" tabindex="3" id="adfoxly-banners-select-{{ banner.details.ID }}" value="{{ banner.details.ID }}">
+                                        <label class="custom-control-label" for="adfoxly-banners-select-{{ banner.details.ID }}"></label>
+                                    </div>
+                                </div>
+                                <div class="adfoxly-number-on-listing">
+                                    {{ i }}
+                                </div>
+                            </td>
+                            <td>
+                                <a href="{{ admin.url }}admin.php?page=adfoxly-banners&edit={{ banner.details.ID }}">
+                                    {{ banner.details.post_title }}
+                                </a>
+                            </td>
+                            <td>
+                                <label class="custom-switch">
+                                    <input type="checkbox" data-adfoxly-ad-status-id="{{ banner.details.ID }}" data-adfoxly-ad-status-name="{{ banner.post_title }}" name="adfoxly-ad-status-checkbox" class="custom-switch-input adfoxly-ad-status-checkbox"
+                                            {% if banner.meta.adfoxly_ad_status == 'active' %} checked {% endif %}>
+                                    <span class="custom-switch-indicator"></span>
+
+                                    <span class="adfoxly-ad-status-description adfoxly-ad-status-description-{{ banner.details.ID }} adfoxly-ad-status-description-enabled
+                                                        {% if banner.meta.adfoxly_ad_status == 'active' %}
+                                                               adfoxly-ad-status-description-selected
+                                                       {% endif %}">
+                                                        </span>
+                                    <span class="adfoxly-ad-status-description adfoxly-ad-status-description-{{ banner.details.ID }} adfoxly-ad-status-description-disabled
+                                                        {% if banner.meta.adfoxly_ad_status is empty or banner.meta.adfoxly_ad_status != 'active' %}
+                                                               adfoxly-ad-status-description-selected
+                                                        {% endif %}">
+                                                        </span>
+                                </label>
+                            </td>
+
+                            <td class="d-none d-xl-table-cell">
+                                <a href="{{ admin.url }}admin.php?page=adfoxly-places&edit={{ banner.meta.adfoxly_adzone_place }}">{{ banner.meta.place.post_title }}</a>
+                            </td>
+
+                            <td class="d-none d-xl-table-cell">
+                                {% set firstCampaign = 'true' %}
+                                {% if banner.meta.campaigns is not empty %}
+                                    {% for campaign in banner.meta.campaigns %}
+                                        {% if firstCampaign != 'true' %}, {% endif %}
+                                        <a href="{{ admin.url }}admin.php?page=adfoxly-campaigns&edit={{ campaign.id }}">{{ campaign.post_title }}
+                                        {% if campaign.end_date is not empty and date(campaign.end_date) <= date() %}
+                                            {{ __( '<small style="color: #333">(finished)</small>', 'adfoxly' ) }}
+                                        {% elseif campaign.end_date is not empty and date(campaign.end_date) <= date('7days') %}
+                                            {{ __( '<small style="color: #333">(ending)</small>', 'adfoxly' ) }}
+                                        {% endif %}
+                                        </a>
+                                        {% set firstCampaign = 'false' %}
+                                    {% endfor %}
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+
+                            <td class="d-none d-xl-table-cell">{% if banner.meta.adfoxly_image is not empty %}
+                                <a href="#" class='open-popover' alt="{{ __( 'Show ad', 'adfoxly' ) }}" data-img="{{ banner.meta.adfoxly_image }}"><i
+                                            class="fas fa-image" style="font-size: 50px;"></i>
+                                </a>
+                                {% endif %}
+                            </td>
+                            <td class="actions" style="text-align: center; padding: 0; display: flex; justify-content: space-around; align-items: center;">
+                                <a href="{{ admin.url }}admin.php?page=adfoxly-banners&edit={{ banner.details.ID }}#step-2">
+                                    <button type="button" class="btn btn-icons btn-rounded btn-primary">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </a>
+                                <a href="{{ admin.url }}admin.php?page=adfoxly-banners&remove={{ banner.details.ID }}&_wpnonce={{ wp_create_nonce }}">
+                                    <button data-action="adfoxly-banner-remove" data-banner-id="<?php echo $value->ID ?>" type="button"
+                                            class="btn btn-icons btn-rounded btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        {% set i = i + 1 %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

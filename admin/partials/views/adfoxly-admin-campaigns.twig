@@ -1,0 +1,144 @@
+{#renderDashboardCampaigns#}
+<div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="adfoxly-notices-wrapper">
+                    {% if ( endingCampaign is not empty and endingCampaign == true ) %}
+                    <div class="alert alert alert-warning">
+                        <div class="alert-body">
+                            At least one of your campaign ends in next few days.
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                {{ campaigns_header }}
+
+                {% if edit is empty and ( getBanners is not empty ) %}
+                    <div style="margin-bottom: 25px;">
+                        <a href="{{ admin.url }}admin.php?page=adfoxly-campaigns&edit=new" class="btn btn-primary"><i class="fas fa-plus-square"></i> Add new campaign</a>
+                    </div>
+                {% endif %}
+
+                <div class="bootstrap4-card">
+
+                    {% if getBanners is empty %}
+                        <div class="card-header">
+                            <h4>We're excited that you are adding your first ad!</h4>
+                        </div>
+                        <div class="card-body">
+                            This view is empty, but everything is fine. Here you will see your list of created campaigns. You are starting, so obviously is that here is empty. Before this, please create your first ad below.
+                        </div>
+                        <div class="card-footer text-right">
+                            <a href="{{ admin.url }}admin.php?page=adfoxly-new" class="btn btn-primary">
+                                <i class="fas fa-plus-square"></i> &nbsp; Create first advert
+                            </a>
+                        </div>
+                    {% else %}
+                        {% if edit is not empty %}
+                        {#<?php#}
+                                        {#$campaigns = get_option( 'adfoxly_campaigns' );#}
+                                        {#if ( isset( $campaigns[ $_GET[ 'edit' ] ] ) && ! empty( $campaigns[ $_GET[ 'edit' ] ] ) ) {#}
+                                            {#$campaign = $campaigns[ $_GET[ 'edit' ] ][ 'options' ];#}
+                                        {#}#}
+                                        {#?>#}
+                        <div class="card-body">
+                            <!-- loader -->
+                            <div class="loading-content" style="position: relative; min-height: 100px; width: 100%; display: block">
+                                <div class="loader" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+                                    <div class="bar-loader">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /loader -->
+
+                            <div class="loaded-content">
+                                <form class="forms-sample" method="post">
+                                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+                                    {{ campaigns_settings }}
+                                    <input type="hidden" name="adfoxly-campaign-id" value="{{ g_id }}">
+                                    <p id="form-invalid-feedback" class="invalid-feedback-form">{{ __('Oops. Wizard cannot be saved. Error found. Please look at the red errors above.', 'adfoxly') }}</p>
+                                    <button type="submit" name='adfoxly-form-action' class="btn btn-primary mr-2" value="save">{{ __('Save', 'adfoxly') }}</button>
+                                    <a href="{{ admin.url }}admin.php?page=adfoxly-campaigns" class="btn btn-light">{{ __('Cancel', 'adfoxly') }}</a>
+                                </form>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="card-body no-padding">
+                            <div class="row">
+                                <div class="table-sorter-wrapper col-lg-12 table-responsive">
+                                    <table id="sortable-table-1" class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 50px;">#</th>
+                                            <th class="sortStyle">Campaign
+                                                <i class="mdi mdi-chevron-down"></i>
+                                            </th>
+                                            <th class="sortStyle">Start Date
+                                                <i class="mdi mdi-chevron-down"></i>
+                                            </th>
+                                            <th class="sortStyle">End Date
+                                                <i class="mdi mdi-chevron-down"></i>
+                                            </th>
+                                            <th class="sortStyle" style="text-align: center; width: 100px;">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% if getCampaigns is not empty %}
+                                            {% for campaign in getCampaigns %}
+                                            <tr>
+                                                <td>{{ loop.index }}</td>
+                                                <td>{{ campaign.details.post_title }}</td>
+                                                <td>
+                                                    {% if ( attribute(campaign.details, 'adfoxly-ad-campaign-start') is empty ) %}
+                                                        -
+                                                    {% else %}
+                                                        {{ attribute(campaign.details, 'adfoxly-ad-campaign-start') }}
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    {% if ( attribute(campaign.details, 'adfoxly-ad-campaign-end') is empty ) %}
+                                                        -
+                                                    {% else %}
+                                                        {{ attribute(campaign.details, 'adfoxly-ad-campaign-end') }}
+                                                    {% endif %}
+
+                                                    {% if ( attribute(campaign.details, 'adfoxly-ad-campaign-end') is not empty and date(attribute(campaign.details, 'adfoxly-ad-campaign-end')) <= date() ) %}
+                                                        {{ __( '<small style="font-weight: bold; color: red">(finished)</small>', 'adfoxly' ) }}
+                                                    {% elseif ( attribute(campaign.details, 'adfoxly-ad-campaign-end') is not empty and date(attribute(campaign.details, 'adfoxly-ad-campaign-end')) < date('7days') ) %}
+                                                        {{ __( '<small style="font-weight: bold;">(ending)</small>', 'adfoxly' ) }}
+                                                    {% endif %}
+                                                </td>
+                                                <td class="actions" style="text-align: center; padding: 0;">
+                                                    <a href="{{ admin.url }}admin.php?page=adfoxly-campaigns&edit={{ campaign.details.ID }}">
+                                                        <button type="button" class="btn btn-icons btn-rounded btn-primary">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </button>
+                                                    </a>
+                                                    <a href="{{ admin.url }}admin.php?page=adfoxly-campaigns&remove={{ campaign.details.ID }}&_wpnonce={{ wp_create_nonce }}">
+                                                        <button data-action="adfoxly-banner-remove" data-banner-id="{{ campaign.details.ID }}" type="button"
+                                                                class="btn btn-icons btn-rounded btn-danger">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        {% endif %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

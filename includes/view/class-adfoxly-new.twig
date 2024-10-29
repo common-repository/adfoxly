@@ -1,0 +1,61 @@
+{#<?php#}
+{#<div class="loader" style="display: block; width: 100%; height: 100%; top: 0; position: fixed; z-index: 2; background: #f3f4fa;">#}
+    {#<div id="preloader">#}
+        {#<div id="loader"></div>#}
+    {#</div>#}
+{#</div>#}
+<div {% if ( page == 'adfoxly-new' or edit is not empty ) %} style="max-width: 1024px; margin: 0 auto;"{% endif %}>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="adfoxly-notices-wrapper"></div>
+
+                {{ ads_header }}
+
+                {% if edit is empty and page == 'adfoxly-banners' and banners is not empty %}
+                    <div style="margin-bottom: 25px;">
+                        <a href="{{ admin.url }}admin.php?page=adfoxly-new" class="btn btn-primary adfoxly-add-new-add-btn"><i
+                                    class="fas fa-plus-square"></i> {{ __( 'Add new ad', 'adfoxly' ) }}</a>
+                        {% if banners is not empty %}
+                            <a href="{{ admin.url }}admin.php?page=adfoxly-banners" data-original-href="{{ admin.url }}admin.php?page=adfoxly-banners" class="btn btn-danger adfoxly-add-new-remove-selected-btn"><i
+                                        class="fas fa-trash"></i> {{ __( 'Delete all selected', 'adfoxly' ) }}</a>
+                            <a href="#" class="btn btn-dark adfoxly-add-new-enable-selected-btn"><i
+                                        class="fas fa-play"></i> {{ __( 'Enable all selected', 'adfoxly' ) }}</a>
+                            <a href="#" class="btn btn-dark adfoxly-add-new-disable-selected-btn"><i
+                                        class="fas fa-pause"></i> {{ __( 'Disable all selected', 'adfoxly' ) }}</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <div>
+                    {% if error == 'true' %}
+                        {{ include('banner/error.twig') }}
+                    {% elseif edit is not empty or page == 'adfoxly-new' %}
+                        {% if wizard == 'false' %}
+                            {{ include('banner/wizard-v2.twig') }}
+                        {% else %}
+                            {{ include('banner/wizard.twig') }}
+                        {% endif %}
+                    {% else %}
+                        {% if banners is not empty %}
+                            {{ include('banner/listing.twig') }}
+                        {% else %}
+                            <div class="bootstrap4-card">
+                                <div class="card-header">
+                                    <h4>{{ __('We\'re excited that you are adding your first ad!', 'adfoxly') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    {{ __('This view is empty, but everything is fine. Here you will see your list of adverts. You are starting, so obviously is that here is empty. Please create your first ad below.', 'adfoxly') }}
+                                </div>
+                                <div class="card-footer text-right">
+                                    <a href="{{ admin.url }}admin.php?page=adfoxly-new" class="btn btn-primary">
+                                        <i class="fas fa-plus-square"></i> &nbsp; {{ __( 'Create first advert', 'adfoxly' ) }}
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

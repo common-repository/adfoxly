@@ -1,0 +1,110 @@
+{#<?php#}
+<div class="content-wrapper">
+    <div class="row profile-page">
+        <div class="col-12">
+            <div class="adfoxly-notices-wrapper"></div>
+        </div>
+        <div class="row col-12">
+            <div class="col-4">
+                <div class="bootstrap4-card">
+                    <div class="card-body">
+                        <ul class="nav nav-pills flex-column nav tab-switch" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="user-profile-info-tab" data-toggle="pill" href="#user-profile-info" role="tab" aria-controls="user-profile-info"
+                                   aria-selected="true">
+                                    {{ __( 'Redirect', 'adfoxly' ) }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="user-profile-activity-tab" data-toggle="pill" href="#user-profile-activity" role="tab"
+                                   aria-controls="user-profile-activity"
+                                   aria-selected="false">
+                                    {{ __( 'Analytics (beta)', 'adfoxly' ) }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="user-profile-activity-tab" data-toggle="pill" href="#user-profile-adstxt" role="tab"
+                                   aria-controls="user-profile-adstxt"
+                                   aria-selected="false">
+                                    {{ __( 'Ads.txt', 'adfoxly' ) }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="user-profile-activity-tab" data-toggle="pill" href="#user-profile-pixel" role="tab"
+                                   aria-controls="user-profile-pixel"
+                                   aria-selected="false">
+                                    {{ __( 'Facebook Pixel', 'adfoxly' ) }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="user-profile-privacy-tab" data-toggle="pill" href="#user-profile-privacy" role="tab"
+                                   aria-controls="user-profile-privacy"
+                                   aria-selected="false">
+                                    {{ __( 'Privacy', 'adfoxly' ) }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="user-profile-core-tab" data-toggle="pill" href="#user-profile-core" role="tab"
+                                   aria-controls="user-profile-core"
+                                   aria-selected="false">
+                                    {{ __( 'Plugin Settings', 'adfoxly' ) }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <form name="post" method="post">
+                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+                    <div class="bootstrap4-card">
+                        <div class="card-body">
+                            <div class="profile-body" style="padding-top: 0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content tab-body" id="profile-log-switch">
+                                            <div class="tab-pane fade show active pr-3" id="user-profile-info" role="tabpanel" aria-labelledby="user-profile-info-tab">
+                                                {{ settings_redirect }}
+                                            </div>
+                                            <div class="tab-pane fade" id="user-profile-activity" role="tabpanel" aria-labelledby="user-profile-activity-tab">
+                                                {{ settings_statistics }}
+                                            </div>
+                                            <div class="tab-pane fade" id="user-profile-adstxt" role="tabpanel" aria-labelledby="user-profile-adstxt-tab">
+                                                {{ settings_adstxt }}
+                                            </div>
+                                            <div class="tab-pane fade" id="user-profile-pixel" role="tabpanel" aria-labelledby="user-profile-pixel-tab">
+                                                {{ settings_pixel }}
+                                            </div>
+                                            <div class="tab-pane fade" id="user-profile-privacy" role="tabpanel" aria-labelledby="user-profile-privacy-tab">
+                                                {{ settings_privacy }}
+                                            </div>
+                                            <div class="tab-pane fade" id="user-profile-core" role="tabpanel" aria-labelledby="user-profile-core-tab">
+                                                {{ settings_core }}
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primary" type="submit" value="{{ __( 'Save', 'adfoxly' ) }}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% if debug_mode == 'true' %}
+            <div class="row col-12">
+                <div class="col-12">
+                    <div class="bootstrap4-card">
+                        <div class="card-body">
+                            <form method="post">
+                                <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+                                <input type="hidden" name="remove-adfoxly-data" value="true">
+                                <input type="submit" value="Clear AdFoxly Data" class="btn btn-danger">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

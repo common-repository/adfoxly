@@ -1,0 +1,93 @@
+{#<?php#}
+{#<div class="loader" style="display: block; width: 100%; height: 100%; top: 0; position: fixed; z-index: 2; background: #f3f4fa;">#}
+    {#<div id="preloader">#}
+        {#<div id="loader"></div>#}
+    {#</div>#}
+{#</div>#}
+{% if page == 'adfoxly-new' %}
+    {#<div style="padding: 0 20px 20px"><a href="{{ admin.url }}admin.php?page=adfoxly-new&wizard=true"><small>{{ __( 'If you want, you can turn on the wizard here.', 'adfoxly' ) }}</small></a></div>#}
+{% else %}
+    {#<div style="padding: 0 20px 20px"><a href="{{ admin.url }}admin.php?page=adfoxly-banners&edit={{ edit }}&wizard=true"><small>{{ __( 'If you want, you can turn on the wizard here.', 'adfoxly' ) }}</small></a></div>#}
+{% endif %}
+<form id="new-ad-wizard-form" method="post" enctype="multipart/form-data">
+    <div class="bootstrap4-card">
+        <div class="card-body no-wizard">
+            <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+            <div class="row" id="step-1-form">
+                <div class="col-sm-12 grid-margin stretch-card">
+                    <section class="section">
+                        <div class="section-body"><h2 class="section-title">{{ __('What','adfoxly') }}</h2><p class="section-lead">{{ __( 'Choose type of ad', 'adfoxly' ) }}</p></div>
+                    </section>
+                </div>
+                {{ format }}
+            </div>
+        </div>
+    </div>
+    <div class="bootstrap4-card">
+        <div class="card-body no-wizard">
+            <div class="" id="step-2-form">
+                <div class="row">
+                    <div class="col-sm-12 grid-margin stretch-card">
+                        <section class="section">
+                            <div class="section-body"><h2 class="section-title">{{ __('What - Details','adfoxly') }}</h2><p class="section-lead">{{ __('Ad Details','adfoxly') }}</p></div>
+                        </section>
+                    </div>
+                </div>
+                {{ image }}
+            </div>
+        </div>
+    </div>
+    <div class="bootstrap4-card">
+        <div class="card-body no-wizard">
+            <div class="row number_of_places_{{ number_of_places }} places_exists_{{ places_exists }}" id="step-3-form">
+                <div class="col-sm-12 grid-margin stretch-card where_number_of_places_{{ number_of_places }}">
+                    <section class="section">
+                        <div class="section-body"><h2 class="section-title">{{ __('Where','adfoxly') }}</h2><p class="section-lead">{{ __('Place on the website','adfoxly') }}</p></div>
+                    </section>
+                </div>
+                {{ spot }}
+            </div>
+        </div>
+    </div>
+    <div class="bootstrap4-card adfoxly-how adfoxly-places-settings">
+        <div class="card-body no-wizard">
+            <div class="" id="step-4-form">
+                <div class="row">
+                    <div class="col-sm-12 grid-margin stretch-card">
+                        <section class="section">
+                            <div class="section-body"><h2 class="section-title">{{ __('How','adfoxly') }}</h2><p class="section-lead">{{ __('Place settings','adfoxly') }}</p></div>
+                        </section>
+                    </div>
+                </div>
+                {{ places_settings }}
+            </div>
+        </div>
+    </div>
+    <div class="bootstrap4-card">
+        <div class="card-body no-wizard">
+            <div class="" id="step-5-form">
+                <div class="row">
+                    <div class="col-sm-12 grid-margin stretch-card">
+                        <section class="section">
+                            <div class="section-body"><h2 class="section-title">{{ __('When','adfoxly') }}</h2><p class="section-lead">{{ __('Set the campaign goals','adfoxly') }}</p></div>
+                        </section>
+                    </div>
+                </div>
+                {{ campaign }}
+            </div>
+            {% if edit is not empty %}
+                <div><input type="hidden" name="adfoxly-banner-id" value="{{ edit }}"/></div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="bootstrap4-card">
+        <div class="card-body no-wizard">
+            <div class="btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-start" style="display: block; padding: 0 20px 0 0;">
+                <p id="form-invalid-feedback" class="invalid-feedback-form">{{ __('Oops. Wizard cannot be saved. Error found. Please look at the red errors above.', 'adfoxly') }}</p>
+                <div class="btn-group mr-2 sw-btn-group" role="group">
+                    <input type="submit" class="btn btn-primary btn-fw" id="next-btn" value="{{ __( "Save", 'adfoxly' ) }}" type="button">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

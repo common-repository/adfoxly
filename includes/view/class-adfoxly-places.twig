@@ -1,0 +1,121 @@
+{#<?php#}
+<div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="adfoxly-notices-wrapper"></div>
+
+                {{ places_header }}
+
+                <div class="bootstrap4-card">
+                    {% if edit is not empty and edit matches '/^[-+]?[0-9]*\\.?[0-9]+$/' %}
+                        <div class="card-body">
+                            <!-- loader -->
+                            <div class="loading-content" style="position: relative; min-height: 100px; width: 100%; display: block">
+                                <div class="loader" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+                                    <div class="bar-loader">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /loader -->
+
+                            <div class="loaded-content">
+                                <form class="forms-sample place-type-{{ test.adfoxly_place_type }}" method="post">
+                                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+                                    {{ places_settings }}
+                                    <input type="hidden" name="adfoxly-place-id" value="{{ edit }}">
+                                    <p id="form-invalid-feedback" class="invalid-feedback-form">{{ __('Oops. Wizard cannot be saved. Error found. Please look at the red errors above.', 'adfoxly') }}</p>
+                                    <button type="submit" name='adfoxly-form-action' class="btn btn-primary mr-2" value="save">{{ __('Save', 'adfoxly') }}</button>
+                                    <a href="{{ admin.url }}admin.php?page=adfoxly-places" class="btn btn-light">{{ __('Cancel', 'adfoxly') }}</a>
+                                </form>
+                            </div>
+                        </div>
+                    {% elseif edit is not empty and edit == 'new' %}
+                        <div class="card-body">
+                            <div class="loaded-content">
+                                <form class="forms-sample" method="post">
+                                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+                                    {{ places_settings }}
+                                    <input type="hidden" name="adfoxly-group-id" value="{{ g_id }}">
+                                    <input type="hidden" name="adfoxly-place-id" value="{{ g_id }}">
+                                    <p id="form-invalid-feedback" class="invalid-feedback-form">{{ __('Oops. Wizard cannot be saved. Error found. Please look at the red errors above.', 'adfoxly') }}</p>
+                                    <button type="submit" name='adfoxly-form-action' class="btn btn-primary mr-2" value="save">{{ __('Save', 'adfoxly') }}</button>
+                                    <a href="{{ admin.url }}admin.php?page=adfoxly-places" class="btn btn-light">{{ __('Cancel', 'adfoxly') }}</a>
+                                </form>
+                            </div>
+                        </div>
+                    {% else %}
+
+                        {% if getCustomPlaces is not empty %}
+
+                            <div class="card-body no-padding">
+                                <div class="row">
+                                    <div class="table-sorter-wrapper col-lg-12 table-responsive">
+                                        <table id="sortable-table-1" class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 50px;">#</th>
+                                                <th class="sortStyle">{{ __('Place', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                                <th class="sortStyle" style="width: 200px">{{ __('Created date', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                                <th class="sortStyle" style="width: 300px">{{ __('Shortcode', 'adfoxly') }}<i class="mdi mdi-chevron-down"></i></th>
+                                                <th class="sortStyle" style="text-align: center; width: 100px;">{{ __('Actions', 'adfoxly') }}</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for customPlace in getCustomPlaces %}
+                                                <tr>
+                                                    <td style="width: 50px;">{{ loop.index }}</td>
+                                                    <td>
+                                                        <a href="{{ admin.url }}admin.php?page=adfoxly-places&edit={{ customPlace.ID }}">
+                                                            {{ customPlace.post_title }}
+                                                        </a>
+                                                    </td>
+                                                    <td style="width: 200px; padding-left: 20px;">{{ customPlace.post_date }}</td>
+                                                    <td style="width: 300px; padding-left: 20px;"><code>[adfoxly place='{{ customPlace.ID }}']</code></td>
+                                                    <td class="actions" style="text-align: center; padding: 0; width: 100px;">
+                                                        <a href="{{ admin.url }}admin.php?page=adfoxly-places&edit={{ customPlace.ID }}">
+                                                            <button type="button" class="btn btn-icons btn-rounded btn-primary">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </button>
+                                                        </a>
+                                                        <a href="{{ admin.url }}admin.php?page=adfoxly-places&remove={{ customPlace.ID }}&_wpnonce={{ wp_create_nonce }}">
+                                                            <button data-action="adfoxly-place-remove" data-place-id="{{ customPlace.ID }}" type="button"
+                                                                    class="btn btn-icons btn-rounded btn-danger">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+
+                            {#<div class="bootstrap4-card">#}
+                                <div class="card-header">
+                                    <h4>{{ __('We\'re excited that you are adding your first ad!', 'adfoxly') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    {{ __('This view is empty, but everything is fine. Here you will see your list of created places. You are starting, so obviously is that here is empty. Before this, please create your first ad below.', 'adfoxly') }}
+                                </div>
+                                <div class="card-footer text-right">
+                                    <a href="{{ admin.url }}admin.php?page=adfoxly-new" class="btn btn-primary">
+                                        <i class="fas fa-plus-square"></i> &nbsp; {{ __( 'Create first advert', 'adfoxly' ) }}
+                                    </a>
+                                </div>
+                            {#</div>#}
+
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

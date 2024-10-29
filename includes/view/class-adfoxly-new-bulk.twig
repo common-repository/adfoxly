@@ -1,0 +1,17 @@
+<div {% if ( page == 'adfoxly-new' or edit is not empty ) %} style="max-width: 1024px; margin: 0 auto;"{% endif %}>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="adfoxly-notices-wrapper"></div>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>File</label>
+                        <input type="file" class="form-control" name="file">
+                        <input type="hidden" value="{{ wp_create_nonce }}" name="_wpnonce">
+                        <input type="submit" value="Upload File" name="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

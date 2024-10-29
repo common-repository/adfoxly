@@ -1,0 +1,136 @@
+{#<?php#}
+{#<div class="loader" style="display: block; width: 100%; height: 100%; top: 0; position: fixed; z-index: 2; background: #f3f4fa;">#}
+    {#<div id="preloader">#}
+        {#<div id="loader"></div>#}
+    {#</div>#}
+{#</div>#}
+<div class="bootstrap4-card">
+    <div class="card-body no-padding">
+        <form id="new-ad-wizard-form" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="_wpnonce" name="_wpnonce" value="{{ wp_create_nonce }}">
+            <div id="smartwizard" class="sw-main sw-theme-arrows no-border">
+                <ul class="no-border top-left-radius top-right-radius">
+                    <li><a href="#step-1">{{ __( "What", 'adfoxly' ) }}
+                            <small style="display: block">{{ __( "Choose type of ad", 'adfoxly' ) }}</small>
+                        </a></li>
+                    <li><a href="#step-2">{{ __( "What - Details", 'adfoxly' ) }}
+                            <small style="display: block">{{ __( "Ad Details", 'adfoxly' ) }}</small>
+                        </a></li>
+                    <li><a href="#step-3" style="border-top-left: 5px;">{{ __( 'Where', 'adfoxly' ) }}
+                            <small style="display: block">{{ __( "Place on the website", 'adfoxly' ) }}</small>
+                        </a></li>
+                    <li class="nav-item-step-4"><a href="#step-4">{{ __( "How", 'adfoxly' ) }}
+                            <small style="display: block">{{ __( "Place settings", 'adfoxly' ) }}</small>
+                        </a></li>
+                    <li><a href="#step-5">{{ __( "When", 'adfoxly' ) }}
+                            <small style="display: block">{{ __( "Set the campaign goals", 'adfoxly' ) }}</small>
+                        </a></li>
+                    <li><a href="#step-6">{{ __( "Preview", 'adfoxly' ) }}
+                            <small style="display: block">{{ __( "Finish", 'adfoxly' ) }}</small>
+                        </a></li>
+                </ul>
+                <div>
+                    <div id="step-1" class="">
+                        <div class="row">
+                            <div id="alert-step-1"></div>
+                        </div>
+                        <div class="row" id="step-1-form" data-parsley-validate>
+                            {{ format }}
+                        </div>
+                    </div>
+                    <div id="step-2" class="">
+                        <div class="row">
+                            <div id="alert-step-2"></div>
+                        </div>
+                        <div class="form-group" id="step-2-form" data-parsley-validate>
+                            {{ image }}
+                        </div>
+                    </div>
+                    <div id="step-3" class="">
+                        <div class="row">
+                            <div id="alert-step-3"></div>
+                        </div>
+                        <div class="row" id="step-3-form" data-parsley-validate>
+                            {{ spot }}
+                        </div>
+                    </div>
+                    <div id="step-4" class="" style="display: none">
+                        <div class="row">
+                            <div id="alert-step-4"></div>
+                        </div>
+                        <div class="form-group" id="step-4-form" data-parsley-validate>
+                            {{ places_settings }}
+                        </div>
+                    </div>
+                    <div id="step-5" class="">
+                        <div class="row">
+                            <div id="alert-step-5"></div>
+                        </div>
+                        <div class="form-group" id="step-5-form" data-parsley-validate>
+                            {{ campaign }}
+                        </div>
+                    </div>
+                    <div id="step-6" class="">
+                        {% if edit is not empty %}
+                            <div><input type="hidden" name="adfoxly-banner-id" value="{{ edit }}"/></div>
+                        {% endif %}
+                        <div class="row">
+                            <div id="alert-step-6"></div>
+                        </div>
+{#                        <div class="row">#}
+{#                            <div class="col-sm-12">{{ __( 'Summary', 'adfoxly' ) }}</div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-12">#}
+{#                                <div class="form-group row form-group-type-src ad-format-group-image">#}
+{#                                    <label class="col-sm-3 col-form-label">{{ __('Image preview', 'adfoxly') }}</label>#}
+{#                                    <div class="col-sm-9 col-form-label">#}
+{#                                        <img id="adfoxly-ad-preview-summary" style="max-height: 100px;">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-3" style="font-weight: 600;">{{ __( 'Ad name', 'adfoxly' ) }}</div>#}
+{#                            <div class="col-sm-9" id="adfoxly-ad-name-summary"></div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-3" style="font-weight: 600;">{{ __( 'Target URL', 'adfoxly' ) }}</div>#}
+{#                            <div class="col-sm-9" id="adfoxly-target-url-summary"></div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-3" style="font-weight: 600;">{{ __( 'Selected Places', 'adfoxly' ) }}</div>#}
+{#                            <div class="col-sm-9" id="adfoxly-places-summary"></div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-3" style="font-weight: 600;">{{ __( 'Selected Campaigns', 'adfoxly' ) }}</div>#}
+{#                            <div class="col-sm-9" id="adfoxly-campaigns-summary"></div>#}
+{#                        </div>#}
+{#                        <div class="row" id='adfoxly-campaigns-start-date-summary-wrapper' style="display: none;">#}
+{#                            <div class="col-sm-3" style="font-weight: 600;">{{ __( 'Campaign start date', 'adfoxly' ) }}</div>#}
+{#                            <div class="col-sm-9" id="adfoxly-campaigns-start-date-summary"></div>#}
+{#                        </div>#}
+{#                        <div class="row" id='adfoxly-campaigns-end-date-summary-wrapper' style="display: none;">#}
+{#                            <div class="col-sm-3" style="font-weight: 600;">{{ __( 'Campaign end date', 'adfoxly' ) }}</div>#}
+{#                            <div class="col-sm-9" id="adfoxly-campaigns-end-date-summary"></div>#}
+{#                        </div>#}
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-start" style="display: block; padding: 0 20px 20px;">
+            <div class="btn-group mr-2 sw-btn-group" role="group">
+                <button class="btn btn-light btn-fw" id="prev-btn" type="button">{{ __( "Go Previous", 'adfoxly' ) }}</button>
+                <button class="btn btn-primary btn-fw" id="next-btn" type="button">{{ __( "Go Next", 'adfoxly' ) }}</button>
+                {% if edit is not empty %}
+                    <button class="btn btn-dark btn-fw" id="save-btn" type="button">{{ __( "Save", 'adfoxly' ) }}</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% if edit is not empty %}
+    <div style="padding: 0 20px"><a href="{{ admin.url }}admin.php?page=adfoxly-banners&edit={{ edit }}&wizard=false"><small>{{ __('If you want, you can turn off the wizard here.','adfoxly') }}</small>  </a></div>
+{% else %}
+    <div style="padding: 0 20px"><a href="{{ admin.url }}admin.php?page=adfoxly-new&wizard=false"><small>{{ __('If you want, you can turn off the wizard here.','adfoxly') }}</small>  </a></div>
+{% endif %}

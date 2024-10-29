@@ -1,0 +1,65 @@
+{#<?php#}
+<div style="position: relative">
+	<div class="navbar-bg"></div>
+	<nav class="navbar navbar-expand-lg main-navbar">
+		<a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
+		<div class="nav-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a href="{{ admin.url }}admin.php?page=adfoxly-banners" class="nav-link"><i style="margin-right: 10px;" class="fas fa-ad"></i>{{ __('Ads', 'adfoxly' ) }}</a></li>
+				<li class="nav-item"><a href="{{ admin.url }}admin.php?page=adfoxly-new" class="nav-link"><i style="margin-right: 10px;" class="fas fa-plus-circle"></i>{{ __('New', 'adfoxly' ) }}</a></li>
+				<li class="nav-item"><a href="{{ admin.url }}admin.php?page=adfoxly-places" class="nav-link"><i style="margin-right: 10px;" class="fas fa-newspaper"></i>{{ __('Places', 'adfoxly' ) }}</a></li>
+				<li class="nav-item"><a href="{{ admin.url }}admin.php?page=adfoxly-campaigns" class="nav-link"><i style="margin-right: 10px;" class="fas fa-bullhorn"></i>{{ __('Campaigns', 'adfoxly' ) }}</a></li>
+				<li class="nav-item"><a href="{{ admin.url }}admin.php?page=adfoxly-analytics" class="nav-link"><i style="margin-right: 10px;" class="fas fa-chart-area"></i>{{ __('Analytics', 'adfoxly' ) }} <span class="badge badge-info" style="font-size: 11px;padding: 4px 10px 3px;">BETA</span></a></li>
+				<li class="nav-item"><a href="#" class="nav-link"><i style="margin-right: 10px;" class="fas fa-file-pdf"></i>{{ __('Reports', 'adfoxly' ) }} <span class="badge badge-light" style="font-size: 11px;padding: 4px 10px 3px;">{{ __('SOON', 'adfoxly') }}</span></a></li>
+			</ul>
+		</div>
+		<ul class="navbar-nav navbar-right ml-auto">
+			<li class="dropdown"><a href="#" data-toggle="dropdown"
+									class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+{#					<i class="far fa-question-circle"></i>#}
+					<div class="d-sm-none d-lg-inline-block" style="margin-top: 0;">{{ __('Need help?', 'adfoxly') }}</div>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+{#					<a href="{{ admin.url }}admin.php?page=adfoxly-faq"#}
+{#					   class="dropdown-item has-icon">#}
+{#						<i class="far fa-user"></i> {{ __( 'FAQ', 'adfoxly' ) }}#}
+{#					</a>#}
+					<a href="{{ admin.url }}admin.php?page=adfoxly-contact"
+					   class="dropdown-item has-icon">
+						<i class="fas fa-award"></i> {{ __( 'Support', 'adfoxly' ) }}
+					</a>
+				</div>
+			</li>
+			{#<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg"><i class="far fa-bell"></i></a>#}
+				{#<div class="dropdown-menu dropdown-list dropdown-menu-right">#}
+					{#<div class="dropdown-header">{{ __('Notifications', 'adfoxly') }}#}
+						{#<div class="float-right">#}
+							{#<a href="#">{{ __('Mark All As Read', 'adfoxly') }}</a>#}
+						{#</div>#}
+					{#</div>#}
+					{#<div class="dropdown-list-content dropdown-list-icons" style="height: 30px; text-align: center">#}
+						{#{{ __('Empty!', 'adfoxly') }}#}
+					{#</div>#}
+					{#<div class="dropdown-footer text-center">#}
+						{#<a href="#">{{ __('View All', 'adfoxly') }} <i class="fas fa-chevron-right"></i></a>#}
+					{#</div>#}
+				{#</div>#}
+			{#</li>#}
+			{#<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">#}
+					{#<i class="fas fa-cog"></i>#}
+					{#<div class="d-sm-none d-lg-inline-block">{{ __('MENU', 'adfoxly') }}</div></a>#}
+				{#<div class="dropdown-menu dropdown-menu-right">#}
+					{#<a href="<?php echo admin_url( 'admin.php?page=adfoxly-account' ) ?>" class="dropdown-item has-icon">#}
+						{#<i class="far fa-user"></i> {{ __( 'Account', 'adfoxly' ) }}#}
+					{#</a>#}
+					{#<a href="<?php echo admin_url( 'admin.php?page=adfoxly-pricing' ) ?>" class="dropdown-item has-icon">#}
+						{#<i class="fas fa-award"></i> {{ __( 'Pricing', 'adfoxly' ) }}#}
+					{#</a>#}
+					{#<a href="<?php echo admin_url( 'admin.php?page=adfoxly-settings' ) ?>" class="dropdown-item has-icon">#}
+						{#<i class="fas fa-cog"></i> {{ __( 'Settings', 'adfoxly' ) }}#}
+					{#</a>#}
+				{#</div>#}
+			{#</li>#}
+		</ul>
+	</nav>
+</div>

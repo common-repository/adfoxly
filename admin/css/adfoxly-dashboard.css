@@ -1,0 +1,543 @@
+.toplevel_page_adfoxly > a .dashicons-before > img {
+  height: 17px;
+  width: auto;
+}
+
+.adfoxly-admin-page .blur {
+  filter: blur(3px);
+}
+
+.adfoxly-admin-page #wpbody .navbar .nav-link.nav-link-user {
+  font-weight: 400;
+}
+
+.adfoxly-admin-page #wpwrap {
+  background: #f3f4fa;
+}
+
+body.adfoxly-admin-page #wpbody .navbar {
+  position: relative;
+}
+
+body.adfoxly-admin-page #wpbody .update-nag {
+  display: none;
+}
+
+body.adfoxly-admin-page #wpbody .adfoxly-notices-wrapper .update-nag {
+  margin-bottom: 20px;
+  margin-top: 0;
+  display: block;
+}
+
+.adfoxly-admin-page #wpbody a {
+  color: #0073aa;
+}
+
+/* custom page */
+
+.toplevel_page_adfoxly #wpcontent,
+.adfoxly-admin-page #wpbody #wpcontent {
+  padding-left: 0;
+}
+
+.toplevel_page_adfoxly .content-heading,
+.adfoxly-admin-page #wpbody .content-heading {
+  border-bottom: 0;
+  background: transparent;
+}
+
+.toplevel_page_adfoxly dd,
+.adfoxly-admin-page #wpbody dd,
+.toplevel_page_adfoxly li,
+.adfoxly-admin-page #wpbody li {
+  margin-bottom: 0;
+  outline: none;
+}
+
+.toplevel_page_adfoxly *:active,
+.adfoxly-admin-page #wpbody *:active,
+.toplevel_page_adfoxly *:focus,
+.adfoxly-admin-page #wpbody *:focus {
+  outline: 0 !important;
+  /*border: none !important;*/
+  -moz-outline-style: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.toplevel_page_adfoxly .fancy-checkbox label,
+.adfoxly-admin-page #wpbody .fancy-checkbox label {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.toplevel_page_adfoxly .file-preview,
+.adfoxly-admin-page #wpbody .file-preview {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.toplevel_page_adfoxly .file-item .file-info,
+.adfoxly-admin-page #wpbody .file-item .file-info {
+  padding: 12px 12px 15px 12px;
+}
+
+.toplevel_page_adfoxly .fancy-checkbox,
+.adfoxly-admin-page #wpbody .fancy-checkbox {
+  margin-right: 0;
+}
+
+.adfoxly-admin-page #wpbody .file-item .file-preview,
+.toplevel_page_adfoxly .file-item .file-preview {
+  padding: 18px 20px;
+  height: 100px;
+}
+
+.adfoxly-admin-page #wpbody .file-preview.pdf,
+.toplevel_page_adfoxly .file-preview.pdf {
+  background: #e9eef2;
+  display: block;
+}
+
+.adfoxly-notices-wrapper {
+  margin: 0;
+}
+
+.adfoxly-admin-page .notice {
+  margin-left: 0;
+  margin-right: 0;
+  display: none;
+}
+
+/* bootstrap ext */
+
+@media all and (min-width: 1400px) {
+  .col-xl-2 {
+    width: 16.66666667%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.adfoxly-admin-page #wpbody-content {
+  min-height: 90vh;
+}
+
+/* new design */
+
+.adfoxly-admin-page #wpbody .navbar.default-layout .navbar-menu-wrapper {
+  width: 100%;
+}
+
+.adfoxly-admin-page #wpbody .navbar.default-layout .navbar-menu-wrapper .navbar-nav.header-links {
+  padding-left: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-main .nav-pills .nav-item .nav-link,
+.adfoxly-admin-page #wpbody .sw-main .nav-tabs .nav-item .nav-link {
+  line-height: initial;
+  font-size: initial;
+  text-align: initial;
+  display: block;
+}
+
+.adfoxly-admin-page #wpbody .nav.nav-tabs.step-anchor .nav-link {
+  border-radius: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-theme-arrows .step-content {
+  padding: 20px 20px 0;
+}
+
+.adfoxly-admin-page #wpbody .form-check {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.adfoxly-admin-page #wpbody label.file-item {
+  margin-bottom: 0;
+}
+
+.adfoxly-admin-page #wpbody .sw-container.tab-content .mdi::before {
+  font-size: 65px;
+  line-height: 65px;
+}
+
+.adfoxly-admin-page #wpbody #smartwizard {
+  display: none;
+}
+
+.adfoxly-admin-page #wpcontent {
+  padding-left: 0;
+}
+
+.adfoxly-admin-page #wpcontent .notice {
+  margin: 5px 0 15px;
+}
+
+.adfoxly-admin-page #wpbody .notice p {
+  margin: .5em 0;
+}
+
+.adfoxly-admin-page #wpbody .notice {
+  -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+  box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.adfoxly-admin-page .no-padding {
+  padding: 0 !important;
+}
+
+.adfoxly-admin-page .no-border {
+  border: 0 !important;
+}
+
+.adfoxly-admin-page #wpbody .btn-toolbar {
+  display: none;
+}
+
+.adfoxly-admin-page .top-left-radius {
+  border-top-left-radius: 5px !important;
+}
+
+.adfoxly-admin-page #wpbody label.col-form-label {
+  padding-top: 24px;
+}
+
+.adfoxly-admin-page #wpbody .form-group-type-radio label.col-form-label {
+  padding-top: 12px;
+}
+
+.adfoxly-admin-page .top-right-radius {
+  border-top-right-radius: 5px !important;
+}
+
+.adfoxly-admin-page #wpbody .nav-pills .nav-item .nav-link,
+.adfoxly-admin-page #wpbody .nav-tabs .nav-item .nav-link {
+  /*color: rgba(0, 0, 0, .5);*/
+  color: #A5ABBD;
+}
+
+.adfoxly-admin-page #wpbody .alert-fill-danger a,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:hover,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:active,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+}
+
+.adfoxly-admin-page #wpbody .alert-fill-danger a:hover,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:active,
+.adfoxly-admin-page #wpbody .alert-fill-danger a:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .7);
+  border-bottom: 2px solid rgba(255, 255, 255, .7);
+}
+
+.adfoxly-admin-page #wpcontent,
+.adfoxly-admin-page #wpcontent #wpbody-content {
+  background: #f3f4fa;
+}
+
+.adfoxly-admin-page #wpbody pre.ace-monokai,
+.adfoxly-admin-page #wpbody pre.ace_dark {
+  color: #f8f8f2;
+}
+
+.adfoxly-admin-page #wpbody .loaded-content {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody {
+  font-family: "Poppins", sans-serif;
+}
+
+.adfoxly-admin-page #wpbody .profile-text {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.adfoxly-admin-page #wpbody .accordion .bootstrap4-card .card-header a {
+  padding-right: 3rem;
+}
+
+.adfoxly-admin-page #wpbody .accordion .bootstrap4-card .card-header a:before {
+  top: 19px;
+  right: 19px;
+}
+
+.adfoxly-admin-page #wpbody .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link .profile-text {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 782px) {
+  .adfoxly-admin-page #wpcontent {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .adfoxly-admin-page #wpcontent {
+    padding-left: 0;
+  }
+}
+
+.adfoxly-admin-page #wpbody .content-wrapper {
+  background: #f3f4fa;
+  padding: 1.5rem 1.7rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.adfoxly-admin-page #wpbody *:focus {
+  box-shadow: none;
+}
+
+.adfoxly-admin-page #wpbody .table {
+  margin-bottom: 0;
+}
+/*
+ * wizard
+ **/
+.adfoxly-admin-page #wpbody .wizard-steps .wizard-step {
+  padding: 10px 0;
+}
+
+.adfoxly-admin-page #wpbody .wizard-steps .wizard-step .wizard-step-icon .fas, .adfoxly-admin-page #wpbody .wizard-steps .wizard-step .wizard-step-icon .far, .adfoxly-admin-page #wpbody .wizard-steps .wizard-step .wizard-step-icon .fab, .adfoxly-admin-page #wpbody .wizard-steps .wizard-step .wizard-step-icon .fal, .adfoxly-admin-page #wpbody .wizard-steps .wizard-step .wizard-step-icon .ion {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.adfoxly-admin-page #wpbody .wizard-steps .wizard-step:before {
+  bottom: 77px;
+}
+
+.adfoxly-admin-page #wpbody .wizard-steps {
+  margin-bottom: 30px;
+}
+
+.adfoxly-admin-page #wpbody .navbar-bg {
+  background: linear-gradient(120deg, #0073AA, #3B8FC8, #5EABE6);
+}
+
+body.adfoxly-admin-page.layout-2 #wpbody .navbar-bg,
+body.adfoxly-admin-page.layout-2 #wpbody .navbar {
+  height: 60px;
+}
+
+.adfoxly-admin-page #wpbody .table:not(.table-sm) thead th {
+  background: transparent;
+}
+
+.adfoxly-admin-page #wpbody .navbar .nav-link {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.adfoxly-admin-page #wpbody a {
+  font-weight: normal;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-image:before {
+  font-size: 64px;
+  margin-left: 3px;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-video:before {
+  font-size: 65px;
+  margin-left: 0;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fab.fa-google {
+  position: relative;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-code:before {
+  font-size: 55px;
+  margin-left: 0;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-play:before {
+  font-size: 50px;
+  margin-left: 12px;
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-redo:before {
+  font-size: 50px;
+  margin-left: 12px;
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-clock:before {
+  font-size: 50px;
+  margin-left: 12px;
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fas.fa-th-large:before {
+  font-size: 50px;
+  margin-left: 12px;
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .file-preview .fab.fa-google:before {
+  font-size: 47px;
+  top: 9px;
+  left: 10px;
+  position: absolute;
+}
+
+/*.nav-item-step-4.nav-item {*/
+  /*display: none;*/
+/*}*/
+
+.adfoxly-admin-page.adfoxly_page_adfoxly-new #wpbody #adfoxly-place-ads-list-wrapper {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-ad-status-description {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-ad-status-description {
+  margin-left: 10px;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-ad-status-description-selected {
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .actions .btn {
+  padding: 0.375rem 0.75rem;
+}
+
+.adfoxly-admin-page #wpbody .sw-toolbar-bottom .btn, .adfoxly-admin-page #wpbody .sw-toolbar-bottom .btn {
+  box-shadow: none;
+}
+
+.adfoxly-admin-page #wpbody .btn-danger, .adfoxly-admin-page #wpbody .btn-danger.disabled {
+  box-shadow: none;
+}
+
+.adfoxly-admin-page #wpbody #step-6.step-content {
+  padding: 20px;
+}
+
+.adfoxly-admin-page #wpbody a:hover {
+  text-decoration: none;
+}
+
+.adfoxly-admin-page #wpbody .fs-notice {
+  display: none !important;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-notices-wrapper .fs-notice {
+  display: block !important;
+}
+
+.adfoxly-admin-page #wpbody .notice,
+.adfoxly-admin-page #wpbody div.error,
+.adfoxly-admin-page #wpbody div.updated {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.adfoxly-admin-page #wpbody .fs-notice .fs-close > * {
+  padding: 2px;
+}
+
+.adfoxly-admin-page #wpbody .tab-pane.disabled .bootstrap-tagsinput {
+  background: #eee;
+}
+
+.adfoxly-admin-page #wpbody a.pro-link,
+.adfoxly-admin-page #wpbody a.pro-link:hover,
+.adfoxly-admin-page #wpbody a.pro-link:active,
+.adfoxly-admin-page #wpbody a.pro-link:visited {
+  color: #333;
+}
+
+
+.adfoxly-admin-page #wpbody .adfoxly-groups-custom-new {
+  display: none;
+}
+
+
+.adfoxly-admin-page #wpbody .adfoxly-notices-wrapper a {
+  display: inline-block;
+}
+
+.adfoxly-admin-page #wpbody .bootstrap4-card .card-body p.help-block {
+  font-weight: 300;
+}
+
+.adfoxly-admin-page #wpbody .bootstrap4-card .card-body p.section-lead {
+  font-weight: 400;
+}
+
+.adfoxly-admin-page #wpbody .form-group .control-label,
+.adfoxly-admin-page #wpbody .form-group > label {
+  font-weight: 500;
+}
+
+.adfoxly-admin-page #wpbody .ad-format-group-image,
+.adfoxly-admin-page #wpbody #adfoxly-place-sticky-position-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-place-sticky-close-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-place-insidepost-position-wrapper,
+.adfoxly-admin-page #wpbody #adfoxly-place-insidepost-position-paragraph-wrapper,
+.adfoxly-admin-page #wpbody .ad-format-group-google-adsense,
+.adfoxly-admin-page #wpbody .ad-format-group-custom-code {
+  display: none;
+}
+
+
+/**
+ * widget
+ */
+/* todo uncommet this - dev only */
+.adfoxly-admin-page #wpbody .adfoxly-places-settings,
+.adfoxly-admin-page #wpbody .adfoxly-adzone-how-rotate-wrapper,
+.adfoxly-admin-page #wpbody .adfoxly-place-name {
+  display: none;
+}
+
+.adfoxly-admin-page.adfoxly_page_adfoxly-places #wpbody .adfoxly-place-name {
+  display: flex;
+}
+
+.adfoxly-admin-page #wpbody .places_exists_true .new-place-wrapper {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody .places_exists_false .adfoxly-adzone-place_custom {
+  display: none;
+}
+
+.adfoxly-admin-page #wpbody .adfoxly-ad-preview {
+  max-width: 100%;
+}
+
+.adfoxly-admin-page #wpbody #adfoxly-ad-preview {
+  max-width: 100%;
+}
+
+[name="adfoxly-facebook-pixel-code"],
+[name="adfoxly-adstxt-code"] {
+  width: 100%;
+  height: 200px;
+}

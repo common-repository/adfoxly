@@ -1,0 +1,14 @@
+{#<?php#}
+<div class="col-sm-12 grid-margin stretch-card">
+    <section class="section">
+        <div class="section-body">
+            {% if title is not empty %}
+                <h2 class="section-title">{{ title }}</h2>
+            {% endif %}
+
+            {% if subtitle is not empty %}
+                <p class="section-lead">{{ subtitle }}</p>
+            {% endif %}
+        </div>
+    </section>
+</div>

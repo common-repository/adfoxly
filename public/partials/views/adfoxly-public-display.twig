@@ -1,0 +1,101 @@
+{#<?php#}
+{% if place_type == 'popup' or place_type == 'popup-v3'  %}
+<div class="adfoxly-overlay{% if place[ 'options' ]['adfoxly-adzone-popup-delay'] is not empty %} adfoxly-place-delay{% endif %}"
+    {% if place[ 'options' ]['adfoxly-adzone-popup-delay'] is not empty %}
+        data-delay="{{ place[ 'options' ]['adfoxly-adzone-popup-delay'] }}"
+    {% endif %}
+>
+{% endif %}
+
+<div id="adfoxly-adzone-{{ id }}" class="adfoxly-wrapper {{ place_type }}{% if place[ 'options' ]['adfoxly-adzone-popup-delay'] is not empty and ( place_type == 'popup' or place_type == 'popup-v3' ) %} adfoxly-place-delay{% endif %}" data-adfoxly-rotate="{{ place['options']['adfoxly-adzone-is-rotate'] }}"
+        {% if place[ 'options' ]['adfoxly-adzone-popup-delay'] is not empty %}
+            data-delay="{{ place[ 'options' ]['adfoxly-adzone-popup-delay'] }}"
+            class="adfoxly-place-delay"
+        {% endif %}
+        {% if place[ 'options' ][ 'adfoxly-adzone-is-rotate'] == 'yes'
+            and place[ 'options' ][ 'adfoxly-adzone-how-rotate' ] is not empty %}
+            data-adfoxly-how-rotate="{{ place[ 'options' ][ 'adfoxly-adzone-how-rotate' ] }}"
+        {% endif %}
+        {% if place[ 'options' ][ 'adfoxly-adzone-is-rotate'] == 'yes'
+            and place[ 'options' ][ 'adfoxly-adzone-how-rotate' ] == 'time'
+            and place[ 'options' ][ 'adfoxly-adzone-rotate-time' ] is not empty %}
+    data-adfoxly-interval="{{ place[ 'options' ][ 'adfoxly-adzone-rotate-time' ] }}"
+        {% endif %}>
+    {% if place_type == 'sticky sticky-bottom' and place[ 'options' ][ 'adfoxly_place_sticky_close' ] != 'no' %}
+        <span class="sticky-bottom-close" data-adzone-id="{{ id }}" style="display: block;">
+            <span class="adfoxly-close-sticky-x">
+                <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg"><path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/></svg>
+            </span>
+        </span>
+    {% endif %}
+    {% if place_type == 'sticky sticky-left' and place[ 'options' ][ 'adfoxly_place_sticky_close' ] != 'no' %}
+        <span class="sticky-left-close" data-adzone-id="{{ id }}" style="display: block;">
+            <span class="adfoxly-close-sticky-left-x">
+                <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg"><path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/></svg>
+            </span>
+        </span>
+    {% endif %}
+    {% if place_type == 'sticky sticky-right' and place[ 'options' ][ 'adfoxly_place_sticky_close' ] != 'no' %}
+        <span class="sticky-right-close" data-adzone-id="{{ id }}" style="display: block;">
+            <span class="adfoxly-close-sticky-right-x">
+                <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg"><path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/></svg>
+            </span>
+        </span>
+    {% endif %}
+    {% if place_type == 'popup' %}
+        <span class="adfoxly-close" data-adzone-id="{{ id }}" style="display: block;">
+            <span class="adfoxly-close-x">
+                <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg"><path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/></svg>
+            </span>
+        </span>
+    {% endif %}
+    {% for value in shuffleMeta %}
+        {% if value['meta'][ 'adfoxly-format' ][ 0 ] == 'google_adsense' and value[ 'meta' ][ 'adfoxly-adsense-code' ] is not empty %}
+            <span data-target="{{ settings[ 'redirect-slug' ] }}/{{ value[ 'id' ] }}"
+                  data-adfoxly-banner-id="{{ value[ 'id' ] }}" {% if first == 'true' %} class="active"{% endif %}>
+                {{ value[ 'meta' ][ 'adfoxly-adsense-code' ][ 0 ] }}
+            </span>
+            {% set first =  'false' %}
+        {% elseif value['meta'][ 'adfoxly-format' ][ 0 ] == 'custom_code' and value[ 'meta' ][ 'adfoxly-custom-code' ] is not empty %}
+            <span data-target="{{ settings[ 'redirect-slug' ] }}/{{ value[ 'id' ] }}"
+                  data-adfoxly-banner-id="{{ value[ 'id' ] }}" {% if first == 'true' %} class="active"{% endif %}>
+                {{ value[ 'meta' ][ 'adfoxly-custom-code' ][ 0 ] }}
+            </span>
+            {% set first =  'false' %}
+        {% elseif value['meta'][ 'adfoxly-format' ][ 0 ] == 'image' and value[ 'meta' ][ 'adfoxly-image' ] is not empty %}
+            <a href="{{ site.url }}/{{ settings[ 'redirect-slug' ] }}/{{ value[ 'id' ] }}"
+               data-target="{{ settings[ 'redirect-slug' ] }}/{{ value[ 'id' ] }}"
+               title="{{ value[ 'post_title' ] }}"
+               data-adfoxly-banner-id="{{ value[ 'id' ] }}"
+                {% if value['meta']['adfoxly-ad-options-target'][0] != '2' %}
+                    target="_blank"
+                {% endif %}
+                {% if value['meta']['adfoxly-ad-options-nofollow'][0] == '2' %}
+                    rel="nofollow"
+                {% elseif value['meta']['adfoxly-ad-options-nofollow'][0] == '3' %}
+                    rel="dofollow"
+                {% else %}
+                    rel="sponsored"
+                {% endif %}
+               class="{% if first == 'true' %}active{% endif %}">
+                {% if place_type == 'popup-v3' %}
+                    <span class="adfoxly-close" data-adzone-id="{{ id }}" style="display: block;"><span class="adfoxly-close-x">&times;</span></span>
+                {% endif %}
+                <img src="{{ value[ 'meta' ][ 'adfoxly-image' ][ 0 ] }}" alt="{{ value[ 'post_title' ] }}" />
+            </a>
+            {% set first =  'false' %}
+        {% endif %}
+
+    {% endfor %}
+    {% if place_type == 'sticky sticky-top' and place[ 'options' ][ 'adfoxly_place_sticky_close' ] != 'no' %}
+        <span class="sticky-top-close" data-adzone-id="{{ id }}" style="display: block;">
+            <span class="adfoxly-close-sticky-top-x">
+                <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg"><path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/></svg>
+            </span>
+        </span>
+    {% endif %}
+</div>
+
+{% if place_type == 'popup' or place_type == 'popup-v3'  %}
+</div>
+{% endif %}
